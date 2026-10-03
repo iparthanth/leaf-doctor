@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: leaf-doctor
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: EXPERT_TOKEN        # password of the expert desk (/expert); Render makes one, see Environment
+        generateValue: true

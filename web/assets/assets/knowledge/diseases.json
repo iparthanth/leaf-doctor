@@ -1,0 +1,1485 @@
+{
+  "helpline": {
+    "number": "16123",
+    "name_bn": "কৃষি কল সেন্টার",
+    "name_en": "Krishi Call Centre",
+    "verified": true,
+    "source": "https://ais.gov.bd/site/page/d9147061-2995-416f-b355-d7feb0d9f9a1/Krishi-call-centre-(16123)"
+  },
+  "verdicts": {
+    "disease": {
+      "bn": "রোগের লক্ষণ পাওয়া গেছে",
+      "en": "Signs of disease found"
+    },
+    "healthy": {
+      "bn": "এই অ্যাপ যে রোগগুলো চেনে, তার কোনোটির লক্ষণ পাওয়া যায়নি। গাছ অসুস্থ মনে হলে কৃষি কর্মকর্তার পরামর্শ নিন।",
+      "en": "No sign of the diseases this app knows. If the plant still looks unwell, ask your agriculture officer."
+    },
+    "not_sure": {
+      "bn": "নিশ্চিত হতে পারছি না — একটি পাতা কাছ থেকে, দিনের আলোয় আবার ছবি তুলুন।",
+      "en": "Not sure — take another photo of one leaf, close up, in daylight."
+    },
+    "wrong_crop": {
+      "bn": "ছবিটি {crop} পাতার মতো দেখাচ্ছে না। ফসল ঠিক বেছে নিয়েছেন কি না দেখুন, বা আবার ছবি তুলুন।",
+      "en": "This does not look like a {crop} leaf. Check the crop you chose, or take another photo."
+    }
+  },
+  "crops": {
+    "rice": {
+      "bn": "ধান",
+      "en": "Rice",
+      "icon": "🌾"
+    },
+    "eggplant": {
+      "bn": "বেগুন",
+      "en": "Eggplant",
+      "icon": "🍆"
+    },
+    "tomato": {
+      "bn": "টমেটো",
+      "en": "Tomato",
+      "icon": "🍅"
+    },
+    "cotton": {
+      "bn": "তুলা",
+      "en": "Cotton",
+      "icon": "তু"
+    },
+    "bottle_gourd": {
+      "bn": "লাউ",
+      "en": "Bottle gourd",
+      "icon": "লা"
+    },
+    "zucchini": {
+      "bn": "জুকিনি",
+      "en": "Zucchini",
+      "icon": "🥒"
+    },
+    "papaya": {
+      "bn": "পেঁপে",
+      "en": "Papaya",
+      "icon": "পেঁ"
+    },
+    "moringa": {
+      "bn": "সজনে",
+      "en": "Moringa",
+      "icon": "🌿"
+    },
+    "agrivision4": {
+      "bn": "অন্যান্য সবজি",
+      "en": "Other vegetables",
+      "icon": "স"
+    }
+  },
+  "diseases": {
+    "*__alternaria_leaf_blight": {
+      "name_bn": "অল্টারনারিয়া পাতা ঝলসানো রোগ",
+      "name_en": "Alternaria leaf blight",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় বাদামি দাগ হয়, দাগের ভেতরে গোল গোল রেখা থাকে। দাগ বড় হয়ে পাতা ঝলসে যায়। পুরোনো পাতায় আগে হয়।",
+      "what_en": "A fungal disease. Brown spots with rings inside that grow until the leaf is scorched. It starts on the older leaves.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "একই জমিতে বারবার একই ফসল বা একই ধরনের ফসল চাষ করবেন না। যেমন টমেটোর পরে বেগুন, বা লাউয়ের পরে কুমড়া লাগাবেন না।",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Water at the base in the morning; keep the leaves dry",
+        "Do not grow the same crop, or a closely related one (for example eggplant after tomato, or pumpkin after bottle gourd), in the same field season after season",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://web.extension.illinois.edu/hortanswers/detailproblem.cfm?PathogenID=127"
+    },
+    "*__angular_leaf_spot": {
+      "name_bn": "কোণাকার পাতার দাগ",
+      "name_en": "Angular leaf spot",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ। পাতায় শিরাগুলোর মাঝে মাঝে কোণাকার, পানিভেজা দাগ হয়। পরে দাগ শুকিয়ে ঝরে পড়ে, পাতায় ছিদ্র হয়ে যায়।",
+      "what_en": "A bacterial disease. Angular, water-soaked spots bounded by the veins that dry and fall out, leaving holes.",
+      "steps_bn": [
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "পাতা ভেজা থাকলে জমিতে কাজ করবেন না",
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "পরের মৌসুমে রোগমুক্ত বীজ ও রোগ সহনশীল জাত ব্যবহার করুন"
+      ],
+      "steps_en": [
+        "Water at the base in the morning; keep the leaves dry",
+        "Do not work among the plants while the leaves are wet",
+        "Pick off spotted leaves and bury or burn them",
+        "Next season, use clean, disease-free seed and a disease-tolerant variety"
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/cucurbits/angular-leaf-spot/"
+    },
+    "*__anthracnose": {
+      "name_bn": "অ্যানথ্রাকনোজ রোগ",
+      "name_en": "Anthracnose",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় প্রথমে পানিভেজা গোল দাগ হয়। পরে দাগ বাদামি-কালো হয়, মাঝখান শুকিয়ে ফেটে যেতে পারে। ফল ও কাণ্ডেও দাগ হয়। গরম, ভেজা আবহাওয়ায় বাড়ে।",
+      "what_en": "A fungal disease. Water-soaked round spots that turn brown-black; the centre may dry and crack. Fruit and stems get spots too. Worse in warm, wet weather.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ও পচা ফল তুলে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "ঝরে পড়া পাতা ও ফল জমি থেকে সরিয়ে ফেলুন; সবজি হলে পরের মৌসুমে ওই জমিতে একই ফসল (বা একই পরিবারের ফসল) করবেন না",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and rotten fruit and bury or burn them",
+        "Water at the base in the morning; keep the leaves dry",
+        "Clear fallen leaves and fruit from the field; for vegetables, do not plant the same crop or its relatives on that land next season",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://www.business.qld.gov.au/industries/farms-fishing-forestry/agriculture/biosecurity/plants/diseases/horticultural/anthracnose"
+    },
+    "*__bacterial_blight": {
+      "name_bn": "ব্যাকটেরিয়াজনিত পাতা ঝলসানো রোগ",
+      "name_en": "Bacterial blight",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ। পাতায় পানিভেজা দাগ, পরে বাদামি হয়ে পাতা ঝলসে যায়; বর্ষায় বাড়ে।",
+      "what_en": "A bacterial disease. Water-soaked spots turn brown until the leaf is scorched; worse in the rainy season.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "জমিতে পানি জমতে দেবেন না; দরকার হলে নালা কেটে পানি বের করুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Do not let water stand; cut a drain if needed",
+        "Water at the base in the morning; keep the leaves dry",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://extension.umd.edu/resource/fungal-and-bacterial-diseases-vegetables"
+    },
+    "*__carica_insect_hole": {
+      "name_bn": "পোকার ছিদ্র",
+      "name_en": "Insect holes",
+      "what_bn": "পোকা পাতা খেয়ে ছিদ্র করেছে।",
+      "what_en": "Insects have eaten holes in the leaf.",
+      "steps_bn": [
+        "সকালে পাতার উল্টো পিঠ দেখুন — পোকা বা মাকড় আছে কি না",
+        "কীড়া ও ডিম হাত দিয়ে তুলে নষ্ট করুন",
+        "পোকা বেশি হলে দমনের উপায় উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন"
+      ],
+      "steps_en": [
+        "In the morning, look under the leaves for insects or mites",
+        "Pick off caterpillars and eggs by hand and destroy them",
+        "If there are many insects, ask your Sub-Assistant Agriculture Officer how to control them"
+      ],
+      "source": "https://extension.okstate.edu/fact-sheets/home-vegetable-garden-insect-pest-control"
+    },
+    "*__cercospora_leaf_spot": {
+      "name_bn": "সারকোস্পোরা পাতার দাগ",
+      "name_en": "Cercospora leaf spot",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় গোল বা কোণাকার বাদামি দাগ, মাঝখানে ধূসর। গরম, ভেজা আবহাওয়ায় বাড়ে।",
+      "what_en": "A fungal disease. Round or angular brown spots with grey centres. Worse in warm, wet weather.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "ঝরে পড়া পাতা জমি থেকে সরিয়ে ফেলুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Clear fallen leaves from the field",
+        "Water at the base in the morning; keep the leaves dry",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://extension.umd.edu/resource/cercospora-leaf-spot-vegetables"
+    },
+    "*__curled_yellow_spot": {
+      "name_bn": "পাতা কোঁকড়ানো ও হলুদ দাগ",
+      "name_en": "Leaf curl with yellow spots",
+      "what_bn": "পাতা কুঁকড়ে ছোট হয়, হলুদ দাগ পড়ে। সাধারণত সাদা মাছির ছড়ানো ভাইরাস বা মাকড়ের কারণে এমন হয়।",
+      "what_en": "Leaves curl, shrink and get yellow spots, usually from a whitefly-borne virus or mites.",
+      "steps_bn": [
+        "সকালে পাতার উল্টো পিঠ দেখুন — পোকা বা মাকড় আছে কি না",
+        "হলুদ আঠালো ফাঁদ ঝুলিয়ে সাদা মাছি ও জাব পোকা ধরুন",
+        "বেশি আক্রান্ত গাছ তুলে মাটিতে পুঁতে ফেলুন; ভাইরাস হলে কোনো ওষুধে সারে না",
+        "পোকা বা মাকড় বেশি হলে দমনের উপায় উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন"
+      ],
+      "steps_en": [
+        "In the morning, look under the leaves for insects or mites",
+        "Hang yellow sticky traps to catch whitefly and aphids",
+        "Pull out badly affected plants and bury them; if it is a virus, no spray will cure it",
+        "If there are many insects or mites, ask your Sub-Assistant Agriculture Officer how to control them"
+      ],
+      "source": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20157800054.pdf"
+    },
+    "*__downy_mildew": {
+      "name_bn": "ডাউনি মিলডিউ",
+      "name_en": "Downy mildew",
+      "what_bn": "ছত্রাকের মতো এক ধরনের জীবাণুর কারণে হয়। পাতার ওপরে শিরাগুলোর মাঝে মাঝে হলুদ, কোণাকার দাগ হয়। পাতার নিচে ধূসর-বেগুনি, তুলার মতো আস্তরণ পড়ে। ভেজা ও কুয়াশাভরা আবহাওয়ায় দ্রুত ছড়ায়।",
+      "what_en": "A disease caused by a fungus-like organism. Yellow angular patches on top of the leaf, grey-purple fuzz underneath. Spreads fast in damp, foggy weather.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "গাছ ঘন হলে কিছু গাছ সরিয়ে পাতলা করুন, যাতে আলো-বাতাস চলাচল করে",
+        "এই রোগ খুব দ্রুত ছড়ায় — ওষুধ লাগবে কি না, কোন ওষুধ, কত মাত্রায়, আজই উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন; অনুমানে স্প্রে করবেন না"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Water at the base in the morning; keep the leaves dry",
+        "Thin crowded plants so air and light can pass",
+        "This spreads fast: today, ask your Sub-Assistant Agriculture Officer whether a spray is needed and which product and dose; do not guess"
+      ],
+      "source": "https://extension.umd.edu/resource/downy-mildew-vegetables"
+    },
+    "*__dry_leaf": {
+      "name_bn": "পাতা শুকিয়ে যাওয়া",
+      "name_en": "Dried leaves",
+      "what_bn": "পানির অভাব, অতিরিক্ত রোদ-গরম, পাতা পুরোনো হওয়া বা গোড়ার রোগে পাতা শুকায়।",
+      "what_en": "Leaves dry from lack of water, strong sun and heat, old age, or a problem at the root.",
+      "steps_bn": [
+        "গোড়ার মাটি শুকনো কি না দেখুন; দরকার হলে সেচ দিন",
+        "মাটি ভেজা থাকার পরও গাছ নেতিয়ে পড়লে, বা গোড়া ও শিকড়ে পচন থাকলে, উপ-সহকারী কৃষি কর্মকর্তাকে দেখান",
+        "শুকনো পাতা কেটে সরিয়ে ফেলুন"
+      ],
+      "steps_en": [
+        "Check whether the soil at the base is dry; water if needed",
+        "If the plant wilts even though the soil is wet, or the stem base or roots are rotten, show it to your Sub-Assistant Agriculture Officer",
+        "Cut away dried leaves"
+      ],
+      "source": "https://extension.colostate.edu/resource/leaf-scorch/"
+    },
+    "*__early_alternaria_leaf_blight": {
+      "name_bn": "অল্টারনারিয়া পাতা ঝলসানো রোগ (শুরুর অবস্থা)",
+      "name_en": "Alternaria leaf blight (early stage)",
+      "what_bn": "ছত্রাকজনিত রোগের শুরু: পাতায় ছোট বাদামি দাগ। এখনই ব্যবস্থা নিলে ছড়ানো আটকানো সহজ।",
+      "what_en": "The start of a fungal disease: small brown spots. Acting now is the easiest way to stop it spreading.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "গাছ ঘন হলে কিছু গাছ সরিয়ে পাতলা করুন, যাতে আলো-বাতাস চলাচল করে",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Water at the base in the morning; keep the leaves dry",
+        "Thin crowded plants so air and light can pass",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://web.extension.illinois.edu/hortanswers/detailproblem.cfm?PathogenID=127"
+    },
+    "*__fungal_damage_leaf": {
+      "name_bn": "ছত্রাকজনিত পাতার ক্ষতি",
+      "name_en": "Fungal leaf damage",
+      "what_bn": "ছত্রাকের কারণে পাতায় দাগ বা পচন হয়েছে। ঠিক কোন রোগ, তা ছবি দেখে নিশ্চিত বলা যাচ্ছে না।",
+      "what_en": "Spots or rot caused by a fungus; the exact disease is not certain from a photo.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "গাছ ঘন হলে কিছু গাছ সরিয়ে পাতলা করুন, যাতে আলো-বাতাস চলাচল করে",
+        "আক্রান্ত পাতা নিয়ে উপ-সহকারী কৃষি কর্মকর্তাকে দেখান"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "Thin crowded plants so air and light can pass",
+        "Take an affected leaf to your Sub-Assistant Agriculture Officer"
+      ],
+      "source": "https://extension.umd.edu/resource/fungal-and-bacterial-diseases-vegetables"
+    },
+    "*__insect_damage": {
+      "name_bn": "পোকার ক্ষতি",
+      "name_en": "Insect damage",
+      "what_bn": "পোকা পাতা খেয়েছে, ছিদ্র করেছে বা পাতা কুঁকড়ে গেছে — এগুলো পোকার আক্রমণের লক্ষণ।",
+      "what_en": "Leaves that are eaten, full of holes or curled are signs of insect attack.",
+      "steps_bn": [
+        "সকালে পাতার উল্টো পিঠ দেখুন — পোকা বা মাকড় আছে কি না",
+        "কীড়া ও ডিম হাত দিয়ে তুলে নষ্ট করুন",
+        "হলুদ আঠালো ফাঁদ ঝুলিয়ে সাদা মাছি ও জাব পোকা ধরুন",
+        "পোকা বেশি হলে দমনের উপায় উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন"
+      ],
+      "steps_en": [
+        "In the morning, look under the leaves for insects or mites",
+        "Pick off caterpillars and eggs by hand and destroy them",
+        "Hang yellow sticky traps to catch whitefly and aphids",
+        "If there are many insects, ask your Sub-Assistant Agriculture Officer how to control them"
+      ],
+      "source": "https://extension.msstate.edu/publications/insect-pests-the-home-vegetable-garden"
+    },
+    "*__iron_chlorosis_damage": {
+      "name_bn": "আয়রনের অভাবে পাতা হলুদ",
+      "name_en": "Iron chlorosis",
+      "what_bn": "কচি পাতায় শিরাগুলোর মাঝের অংশ হলুদ হয়, কিন্তু শিরা সবুজ থাকে। মাটি ক্ষারীয় হলে বা জমিতে পানি জমে থাকলে গাছ আয়রন নিতে পারে না।",
+      "what_en": "Young leaves yellow between the veins while the veins stay green. In alkaline or waterlogged soil the plant cannot take up iron.",
+      "steps_bn": [
+        "সবজির জমিতে পানি জমতে দেবেন না; দরকার হলে নালা কেটে পানি বের করুন",
+        "মাটিতে পচা গোবর বা কম্পোস্ট দিন",
+        "উপজেলা কৃষি অফিস বা মৃত্তিকা সম্পদ উন্নয়ন ইনস্টিটিউটে মাটি পরীক্ষা করান",
+        "অণুপুষ্টি সার লাগবে কি না উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন"
+      ],
+      "steps_en": [
+        "In vegetable fields, do not let water stand; cut a drain if needed",
+        "Add rotted manure or compost to the soil",
+        "Get the soil tested through the Upazila agriculture office or the Soil Resource Development Institute (SRDI)",
+        "Ask your Sub-Assistant Agriculture Officer whether a micronutrient fertiliser is needed"
+      ],
+      "source": "https://extension.illinois.edu/plant-problems/chlorosis"
+    },
+    "*__mosaic_virus": {
+      "name_bn": "মোজাইক ভাইরাস",
+      "name_en": "Mosaic virus",
+      "what_bn": "ভাইরাসজনিত রোগ। পাতায় হালকা ও গাঢ় সবুজ ছোপ, পাতা কুঁচকে যায়। জাব পোকা, সাদা মাছি ও হাতের মাধ্যমে ছড়ায়।",
+      "what_en": "A virus disease. Light and dark green mottling, puckered leaves. Spread by aphids, whitefly and hands.",
+      "steps_bn": [
+        "ভাইরাসের কোনো ওষুধ নেই — আক্রান্ত গাছ তুলে মাটিতে পুঁতে ফেলুন, যাতে অন্য গাছে না ছড়ায়",
+        "আক্রান্ত গাছ ধরার পর সাবান দিয়ে হাত ধুয়ে নিন",
+        "হলুদ আঠালো ফাঁদ ঝুলিয়ে সাদা মাছি ও জাব পোকা ধরুন"
+      ],
+      "steps_en": [
+        "There is no cure for a virus: pull out infected plants and bury them so it does not spread",
+        "Wash your hands with soap after touching an infected plant",
+        "Hang yellow sticky traps to catch whitefly and aphids"
+      ],
+      "source": "https://extension.umd.edu/resource/viruses-vegetables"
+    },
+    "*__other_disease": {
+      "name_bn": "অন্য রোগের লক্ষণ",
+      "name_en": "Signs of another disease",
+      "what_bn": "পাতায় রোগের লক্ষণ আছে, কিন্তু এই অ্যাপ যেসব রোগ চেনে, এটি তার কোনোটি নয়।",
+      "what_en": "The leaf shows disease, but not one of the specific diseases this app knows.",
+      "steps_bn": [
+        "আক্রান্ত পাতা নিয়ে উপ-সহকারী কৃষি কর্মকর্তাকে দেখান",
+        "কৃষি কল সেন্টারের ১৬১২৩ নম্বরে ফোন করে লক্ষণ জানান"
+      ],
+      "steps_en": [
+        "Take an affected leaf to your Sub-Assistant Agriculture Officer",
+        "Call the Krishi Call Centre (16123) and describe what you see"
+      ],
+      "source": "https://ais.gov.bd/pages/static-pages/6922df5e933eb65569e21833"
+    },
+    "*__spot": {
+      "name_bn": "পাতার দাগ রোগ",
+      "name_en": "Leaf spot",
+      "what_bn": "পাতায় ছোট বাদামি-কালো দাগ পড়ে। সাধারণত ছত্রাক বা ব্যাকটেরিয়ার কারণে হয়। নিচের পাতায় আগে দেখা দেয়।",
+      "what_en": "Small brown-black spots, usually fungal or bacterial, starting on the lower leaves.",
+      "steps_bn": [
+        "নিচের দাগওয়ালা পাতা ছিঁড়ে নষ্ট করুন",
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "লতানো বা হেলে পড়া গাছ মাচা বা খুঁটিতে তুলে দিন, যাতে পাতা মাটিতে না লাগে",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off spotted lower leaves and destroy them",
+        "Water at the base in the morning; keep the leaves dry",
+        "Lift vines or leaning plants onto a trellis or stake so the leaves stay off the soil",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "source": "https://extension.umd.edu/resource/fungal-and-bacterial-diseases-vegetables"
+    },
+    "*__white_spot": {
+      "name_bn": "পাতায় সাদা দাগ",
+      "name_en": "White spots",
+      "what_bn": "পাতায় ছোট সাদা বা ধূসর দাগ পড়ে। ছত্রাকের কারণে, অথবা মাকড় বা পোকা পাতার রস চুষে খেলে এমন হতে পারে।",
+      "what_en": "Small white or grey spots, from a fungus, mites, or insects sucking the sap.",
+      "steps_bn": [
+        "সকালে পাতার উল্টো পিঠ দেখুন — পোকা বা মাকড় আছে কি না",
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "আক্রান্ত পাতা নিয়ে উপ-সহকারী কৃষি কর্মকর্তাকে দেখান"
+      ],
+      "steps_en": [
+        "In the morning, look under the leaves for insects or mites",
+        "Pick off spotted leaves and bury or burn them",
+        "Take an affected leaf to your Sub-Assistant Agriculture Officer"
+      ],
+      "source": "https://content.ces.ncsu.edu/extension-gardener-handbook/5-diseases-and-disorders"
+    },
+    "*__xanthomonas_leaf_spot": {
+      "name_bn": "ব্যাকটেরিয়াজনিত পাতার দাগ রোগ",
+      "name_en": "Xanthomonas leaf spot (bacterial)",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ। পাতায় ছোট, পানিভেজা দাগ হয়। পরে দাগ বাদামি হয়, চারপাশে হলুদ বলয় দেখা দেয়।",
+      "what_en": "A bacterial disease. Small water-soaked spots that turn brown with a yellow halo.",
+      "steps_bn": [
+        "সকালে গাছের গোড়ায় পানি দিন; পাতা ভেজাবেন না",
+        "পাতা ভেজা থাকলে জমিতে কাজ করবেন না",
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "পরের মৌসুমে রোগমুক্ত বীজ ও রোগ সহনশীল জাত ব্যবহার করুন"
+      ],
+      "steps_en": [
+        "Water at the base in the morning; keep the leaves dry",
+        "Do not work among the plants while the leaves are wet",
+        "Pick off spotted leaves and bury or burn them",
+        "Next season, use clean, disease-free seed and a disease-tolerant variety"
+      ],
+      "source": "https://extension.umd.edu/resource/bacterial-diseases-tomato"
+    },
+    "*__yellow_mosaic_virus": {
+      "name_bn": "হলুদ মোজাইক ভাইরাস",
+      "name_en": "Yellow mosaic virus",
+      "what_bn": "ভাইরাসজনিত রোগ, সাদা মাছি বা জাব পোকা ছড়ায়। পাতায় উজ্জ্বল হলুদ-সবুজ ছোপ, পাতা ছোট ও কোঁকড়া হয়।",
+      "what_en": "A virus disease spread by whitefly or aphids. Bright yellow-green mottling; leaves stay small and crinkled.",
+      "steps_bn": [
+        "ভাইরাসের কোনো ওষুধ নেই — আক্রান্ত গাছ তুলে মাটিতে পুঁতে ফেলুন, যাতে অন্য গাছে না ছড়ায়",
+        "হলুদ আঠালো ফাঁদ ঝুলিয়ে সাদা মাছি ও জাব পোকা ধরুন",
+        "জমি ও আশপাশের আগাছা পরিষ্কার রাখুন",
+        "পোকা বেশি হলে দমনের উপায় উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন"
+      ],
+      "steps_en": [
+        "There is no cure for a virus: pull out infected plants and bury them so it does not spread",
+        "Hang yellow sticky traps to catch whitefly and aphids",
+        "Keep the field and its edges free of weeds",
+        "If there are many insects, ask your Sub-Assistant Agriculture Officer how to control them"
+      ],
+      "source": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20157800054.pdf"
+    },
+    "*__yellow_necrotic_spots_holes": {
+      "name_bn": "হলুদ ও শুকনো দাগ এবং ছিদ্র",
+      "name_en": "Yellow dead spots and holes",
+      "what_bn": "পাতায় হলুদ দাগ পড়ে। পরে দাগের অংশ শুকিয়ে ঝরে পড়ে, ছিদ্র হয়ে যায়। ছত্রাক, ব্যাকটেরিয়া বা পোকা — যেকোনোটি এর কারণ হতে পারে।",
+      "what_en": "Yellow spots that die and fall out as holes. A fungus, bacteria or insects can cause it.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "সকালে পাতার উল্টো পিঠ দেখুন — পোকা বা মাকড় আছে কি না",
+        "আক্রান্ত পাতা নিয়ে উপ-সহকারী কৃষি কর্মকর্তাকে দেখান"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and bury or burn them",
+        "In the morning, look under the leaves for insects or mites",
+        "Take an affected leaf to your Sub-Assistant Agriculture Officer"
+      ],
+      "source": "https://content.ces.ncsu.edu/extension-gardener-handbook/5-diseases-and-disorders"
+    },
+    "agrivision4__anthracnose": {
+      "name_bn": "এনথ্রাকনোজ রোগ",
+      "name_en": "Anthracnose",
+      "what_bn": "ছত্রাকজনিত রোগ; পাতায় গোল হালকা বাদামি থেকে গাঢ় বাদামি দাগ পড়ে, দাগ শুকিয়ে ফেটে বা ঝরে যেতে পারে এবং গরম ও ভেজা আবহাওয়ায় দ্রুত ছড়ায়।",
+      "what_en": "Caused by a fungus; round tan to dark-brown spots appear on the leaves. The spots dry out and may crack or fall out of the leaf. The disease spreads fast in warm, wet weather.",
+      "steps_bn": [
+        "আক্রান্ত পাতা ও আগের ফসলের অবশিষ্টাংশ জমি থেকে সরিয়ে নষ্ট করুন।",
+        "পাতার ওপর পানি না দিয়ে নালায় বা গাছের গোড়ায় সেচ দিন, জমিতে পানি জমতে দেবেন না, এবং পরের বার রোগমুক্ত বীজ ও অন্য জমি ব্যবহার করুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove affected leaves and old crop debris from the field and destroy them.",
+        "Water in the furrows or at the base instead of over the leaves, do not let water stand in the field, and next season use clean seed and a different field.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://apps.lucidcentral.org/ppp/text/web_full/entities/cucurbit_anthracnose_200.htm"
+    },
+    "agrivision4__downy_mildew": {
+      "name_bn": "ডাউনি মিলডিউ রোগ",
+      "name_en": "Downy mildew",
+      "what_bn": "ছত্রাকের মতো এক ধরনের জীবাণু (ওয়াটার মোল্ড) দিয়ে হয়; পাতার ওপরে ফ্যাকাশে সবুজ থেকে হলুদ দাগ পড়ে এবং ভেজা আবহাওয়ায় পাতার নিচে ধূসর থেকে সাদাটে তুলার মতো আস্তরণ দেখা যায়। টমেটোতে এটি সাধারণত নাবী ধ্বসা রোগ, যা কয়েক দিনের মধ্যে পুরো ক্ষেত নষ্ট করতে পারে — তাই দেরি না করে ব্যবস্থা নিন।",
+      "what_en": "Caused by a fungus-like water mould; pale-green to yellow patches form on the upper leaf, with grey to whitish downy growth underneath in damp weather. On tomato this is usually late blight, which can destroy a whole field within days, so act without delay.",
+      "steps_bn": [
+        "আক্রান্ত পাতা ছিঁড়ে জমি থেকে দূরে নষ্ট করুন।",
+        "পাতার ওপর পানি দেবেন না, জমিতে পানি জমতে দেবেন না এবং গাছের মাঝে বাতাস চলাচলের জায়গা রাখুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off affected leaves and destroy them away from the field.",
+        "Do not water over the leaves, do not let water stand in the field, and keep space between plants for air flow.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/cucurbits/downy-mildew/"
+    },
+    "agrivision4__mosaic_virus": {
+      "name_bn": "মোজাইক ভাইরাস রোগ",
+      "name_en": "Mosaic virus",
+      "what_bn": "ভাইরাসজনিত রোগ; লাউ-কুমড়া ও পেঁপেতে সাধারণত জাব পোকা বা সাদা মাছি দিয়ে ছড়ায়, আর টমেটোতে হাত ও যন্ত্রপাতির ছোঁয়াতেও ছড়ায়; পাতায় হালকা ও গাঢ় সবুজ বা হলুদ ছোপ ছোপ মোজাইক দেখা যায়, পাতা কুঁকড়ে বা বিকৃত হয় এবং গাছ খাটো থাকে।",
+      "what_en": "Caused by a virus; in gourds and papaya it is usually spread by aphids or whiteflies, and in tomato it also spreads on hands and tools; leaves show light- and dark-green or yellow mosaic patches, may crinkle or deform, and the plant stays stunted.",
+      "steps_bn": [
+        "আক্রান্ত গাছ শুরুতেই তুলে নষ্ট করুন এবং জমি আগাছামুক্ত রাখুন; ভাইরাস রোগ স্প্রে দিয়ে সারে না।",
+        "চারা অবস্থায় নেট দিয়ে ঢেকে রাখুন বা হলুদ আঠালো ফাঁদ লাগান, যাতে জাব পোকা ও সাদা মাছি কম থাকে; আর আক্রান্ত গাছ ধরার পর সাবান দিয়ে হাত ও যন্ত্রপাতি ধুয়ে নিন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out and destroy infected plants early and keep the field weed-free; a virus cannot be cured by spraying.",
+        "Cover young plants with net or hang yellow sticky traps to keep aphids and whiteflies down, and wash hands and tools with soap after touching sick plants.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/736"
+    },
+    "bottle_gourd__alternaria_leaf_blight": {
+      "name_bn": "লাউয়ের আলটারনারিয়া পাতা ঝলসানো রোগ",
+      "name_en": "Bottle gourd Alternaria leaf blight",
+      "what_bn": "আলটারনারিয়া নামের ছত্রাকের কারণে হয়। পাতায় বাদামি দাগ পড়ে, দাগের ভেতরে পরপর কয়েকটি গোল বলয় ও চারপাশে হলুদ আভা থাকে। দাগগুলো বড় হয়ে মিশে পুরো পাতা বাদামি হয়ে শুকিয়ে যায়।",
+      "what_en": "Caused by the fungus Alternaria; brown spots with target-like rings and a yellow halo grow and join until the whole leaf turns brown and dry.",
+      "steps_bn": [
+        "দাগওয়ালা পাতা ছিঁড়ে নষ্ট করুন এবং ফসল তোলার পর গাছের অবশিষ্টাংশ পুড়িয়ে বা মাটির গভীরে পুঁতে ফেলুন।",
+        "গোড়ায় সেচ দিন, পাতা ভেজা থাকলে মাচায় কাজ করবেন না এবং সুষম সার দিন যাতে গাছ দুর্বল না হয়।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off spotted leaves and destroy them, and burn or bury crop debris deep after harvest.",
+        "Water at the base, do not work on the trellis while leaves are wet, and use balanced fertiliser so the plants do not become weak.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://vegpath.plantpath.wisc.edu/diseases/cucurbit-alternaria-leaf-blight"
+    },
+    "bottle_gourd__anthracnose": {
+      "name_bn": "লাউয়ের এনথ্রাকনোজ রোগ",
+      "name_en": "Bottle gourd anthracnose",
+      "what_bn": "ছত্রাকজনিত রোগ; পাতায় গোল হালকা বাদামি থেকে বাদামি দাগ পড়ে, দাগ শুকিয়ে ফেটে বা ঝরে যেতে পারে এবং গরম ও ভেজা আবহাওয়ায় দ্রুত ছড়ায়।",
+      "what_en": "Caused by a fungus; round tan to brown spots appear on the leaves. The spots dry out and may crack or fall out of the leaf. The disease spreads fast in warm, wet weather.",
+      "steps_bn": [
+        "আক্রান্ত পাতা ও আগের ফসলের অবশিষ্টাংশ জমি থেকে সরিয়ে নষ্ট করুন।",
+        "পাতার ওপর পানি ছিটাবেন না, বেড শুকনো রাখুন এবং পরের মৌসুমে রোগমুক্ত বীজ ব্যবহার করুন ও অন্য জমিতে চাষ করুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove affected leaves and old crop debris from the field and destroy them.",
+        "Water in the furrows or at the base instead of sprinkling over the leaves, do not let water stand in the field, and next season use clean seed and a different field.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://apps.lucidcentral.org/ppp/text/web_full/entities/cucurbit_anthracnose_200.htm"
+    },
+    "bottle_gourd__downy_mildew": {
+      "name_bn": "লাউয়ের ডাউনি মিলডিউ রোগ",
+      "name_en": "Bottle gourd downy mildew",
+      "what_bn": "ছত্রাকের মতো এক ধরনের জীবাণুর কারণে হয়। প্রথমে পুরনো পাতায় সাদা বা হলদে থেকে বাদামি তালির মতো দাগ পড়ে। ভেজা আবহাওয়ায় পাতার নিচে তুলার মতো আস্তরণ দেখা যায় এবং রোগ ধীরে ধীরে অন্য পাতায় ছড়ায়।",
+      "what_en": "Caused by a fungus-like water mould; patch-like whitish or yellow to brown spots appear first on older leaves, with downy growth underneath in damp weather, and slowly spread to other leaves.",
+      "steps_bn": [
+        "আক্রান্ত পাতা সংগ্রহ করে নষ্ট করুন এবং ক্ষেত ও আশপাশ থেকে আগাছা ও বুনো লাউ-কুমড়া জাতীয় গাছ সরিয়ে ফেলুন।",
+        "ক্ষেত পরিষ্কার রাখুন, ভালো পানি নিষ্কাশনের ব্যবস্থা রাখুন এবং পাতার ওপর পানি দেবেন না।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Collect and destroy affected leaves, and clear weeds and wild gourd-family plants from in and around the field.",
+        "Keep the field clean, make sure water drains well, and do not water over the leaves.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/737"
+    },
+    "bottle_gourd__early_alternaria_leaf_blight": {
+      "name_bn": "লাউয়ের আলটারনারিয়া পাতা ঝলসানো রোগ (প্রাথমিক পর্যায়)",
+      "name_en": "Bottle gourd early Alternaria leaf blight",
+      "what_bn": "আলটারনারিয়া ছত্রাকজনিত পাতা ঝলসানো রোগের শুরুর পর্যায়; সাধারণত পুরনো পাতায় অল্প কয়েকটি ছোট হলদে-বাদামি দাগ দেখা যায়, যা পরে বড় হয়ে মিশে যায়।",
+      "what_en": "The early stage of Alternaria fungal leaf blight: a few small yellow-brown spots, mostly on older leaves, which later enlarge and join.",
+      "steps_bn": [
+        "এখনই দাগওয়ালা পাতা ছিঁড়ে নষ্ট করুন। শুরুতে ব্যবস্থা নিলে রোগ অনেক কম ছড়ায়।",
+        "সকালে গোড়ায় সেচ দিন, পাতা ভেজাবেন না এবং মাচায় লতা ছড়িয়ে দিন যাতে বাতাস চলাচল করে।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off the spotted leaves now and destroy them, because acting early greatly slows the spread.",
+        "Water at the base in the morning without wetting the leaves, and spread the vines on the trellis so air can move.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/749"
+    },
+    "bottle_gourd__fungal_damage_leaf": {
+      "name_bn": "লাউয়ের পাতায় ছত্রাকজনিত ক্ষতি",
+      "name_en": "Bottle gourd fungal leaf damage",
+      "what_bn": "বিভিন্ন ছত্রাকের কারণে পাতার ক্ষতি; পাতায় হলদে থেকে বাদামি দাগ বা ছোপ, অথবা পাউডার বা তুলার মতো আস্তরণ দেখা যায়। এগুলো ধীরে ধীরে মিশে পাতায় ছড়িয়ে পড়ে।",
+      "what_en": "A general fungal leaf problem: yellow to brown spots, patches, or powdery or fuzzy growth appear on the leaf and slowly join and spread.",
+      "steps_bn": [
+        "আক্রান্ত পাতা সংগ্রহ করে জমি থেকে দূরে নষ্ট করুন।",
+        "ক্ষেত পরিষ্কার রাখুন, ভালো পানি নিষ্কাশনের ব্যবস্থা রাখুন এবং পাতার ওপর পানি দেবেন না।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Collect affected leaves and destroy them away from the field.",
+        "Keep the field clean, make sure water drains well, and do not water over the leaves.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/739"
+    },
+    "bottle_gourd__mosaic_virus": {
+      "name_bn": "লাউয়ের মোজাইক ভাইরাস রোগ",
+      "name_en": "Bottle gourd mosaic virus",
+      "what_bn": "জাব পোকা ও সাদা মাছি দিয়ে ছড়ানো ভাইরাসজনিত রোগ; পাতায় হলুদ ও গাঢ় সবুজ ছোপ ছোপ মোজাইক দেখা যায়, পাতা কুঁকড়ে ছোট হয় এবং গাছের বৃদ্ধি কমে যায়।",
+      "what_en": "Caused by a virus spread by aphids and whiteflies; leaves show yellow and dark-green mosaic patches, become crinkled and small, and plant growth slows.",
+      "steps_bn": [
+        "আক্রান্ত গাছ শুরুতেই তুলে নষ্ট করুন; ভাইরাস রোগ স্প্রে দিয়ে সারে না।",
+        "জমি সবসময় আগাছামুক্ত রাখুন এবং জাব পোকা ও সাদা মাছি ধরতে হলুদ আঠালো ফাঁদ লাগান।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out and destroy infected plants early; a virus cannot be cured by spraying.",
+        "Keep the field weed-free at all times, and hang yellow sticky traps to catch aphids and whiteflies.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/736"
+    },
+    "cotton__alternaria_leaf_spot": {
+      "name_bn": "তুলার অলটারনারিয়া পাতার দাগ রোগ",
+      "name_en": "Cotton Alternaria leaf spot",
+      "what_bn": "ছত্রাকজনিত রোগ; পাতায় ছোট বাদামি গোল দাগ হয়, দাগের ভেতরে পরপর কয়েকটি গোল রিং দেখা যায়; দাগগুলো মিশে গিয়ে পাতা শুকিয়ে ঝরে পড়ে।",
+      "what_en": "A fungal disease that makes small brown round spots with ring-like circles on the leaf; the spots join and the leaves dry and drop.",
+      "steps_bn": [
+        "দাগযুক্ত পাতা ছিঁড়ে এবং ঝরে পড়া পাতা কুড়িয়ে নষ্ট করুন; জমি পরিষ্কার রাখুন।",
+        "রোগমুক্ত জমির বীজ ব্যবহার করুন এবং ফসল তোলার পর গভীর চাষ দিয়ে ফসলের অবশিষ্টাংশ মাটিতে চাপা দিন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Collect and destroy spotted and fallen leaves, and keep the field clean.",
+        "Use seed from a disease-free crop, and after harvest plough deeply to bury crop remains.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d6.html"
+    },
+    "cotton__bacterial_blight": {
+      "name_bn": "তুলার ব্যাকটেরিয়াজনিত পাতা ঝলসানো রোগ (কোণাকার দাগ)",
+      "name_en": "Cotton bacterial blight (angular leaf spot)",
+      "what_bn": "এটি ব্যাকটেরিয়াজনিত রোগ। পাতায় প্রথমে ছোট, গাঢ় সবুজ, পানিভেজা দাগ হয়। পরে দাগগুলো দুই শিরার মাঝের অংশে আটকে থেকে কোণাকার বাদামি-কালো দাগ হয়ে যায়।",
+      "what_en": "A bacterial disease that first makes small dark-green, water-soaked spots on the leaf; the spots stay between the veins and turn into angular brown-black spots.",
+      "steps_bn": [
+        "দাগযুক্ত পাতা তুলে নষ্ট করুন এবং জমি ও আশপাশ থেকে আগাছা ও আপনা-আপনি গজানো তুলা গাছ সরিয়ে ফেলুন।",
+        "ঘন গাছ পাতলা করুন, অতিরিক্ত ইউরিয়া দেবেন না, সুপারিশমতো পটাশ সার দিন; পরের মৌসুমে এই জমিতে তুলার বদলে অন্য ফসল করুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off and destroy spotted leaves, and remove weeds and self-grown (volunteer) cotton plants in and around the field.",
+        "Thin crowded plants, avoid extra urea and apply potash as recommended; next season grow a different crop instead of cotton on this land.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d9.html"
+    },
+    "cotton__curl_virus": {
+      "name_bn": "তুলার পাতা কোঁকড়ানো ভাইরাস রোগ",
+      "name_en": "Cotton leaf curl virus",
+      "what_bn": "সাদা মাছির মাধ্যমে ছড়ানো ভাইরাস রোগ। পাতা কুঁকড়ে যায় এবং শিরা মোটা হয়। পাতার নিচে ছোট পাতার মতো বাড়তি অংশও দেখা যেতে পারে।",
+      "what_en": "A virus disease spread by whiteflies; leaves curl, the veins become thick, and small leaf-like outgrowths may form on the underside of the leaf.",
+      "steps_bn": [
+        "আক্রান্ত গাছ শুরুতেই তুলে মাটিতে পুঁতে ফেলুন, যাতে সাদা মাছি সুস্থ গাছে ভাইরাস ছড়াতে না পারে।",
+        "জমি ও আইল আগাছামুক্ত রাখুন। সাদা মাছি আছে কি না দেখতে হলুদ আঠালো ফাঁদ লাগান। খরা হলে সেচ দিন, যাতে গাছ পানির অভাবে না পড়ে।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out and bury infected plants early so whiteflies cannot carry the virus to healthy plants.",
+        "Keep the field and bunds weed-free, hang yellow sticky traps to watch whiteflies, and irrigate in dry spells so plants are not water-stressed.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801354.pdf"
+    },
+    "cotton__fusarium_wilt": {
+      "name_bn": "তুলার ফিউজেরিয়াম ঢলে পড়া রোগ",
+      "name_en": "Cotton Fusarium wilt",
+      "what_bn": "মাটিবাহিত ছত্রাকজনিত রোগ; পাতা হলুদ হয়ে নেতিয়ে পড়ে, গাছ ঢলে পড়ে এবং কাণ্ড চিরলে ভেতরে বাদামি বা কালো দাগ দেখা যায়।",
+      "what_en": "A soil-borne fungal disease; leaves turn yellow, droop and wilt, and the inside of a cut stem shows brown or black streaks.",
+      "steps_bn": [
+        "ঢলে পড়া গাছ শিকড়সহ তুলে জমি থেকে দূরে নষ্ট করুন।",
+        "পচা গোবর বা জৈব সার দিন, গ্রীষ্মে গভীর চাষ দিন এবং কয়েক বছর এই জমিতে তুলার বদলে অন্য ফসল করুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Uproot wilted plants with their roots and destroy them away from the field.",
+        "Add well-rotted cow dung or compost, plough deeply in summer, and grow crops other than cotton on this land for a few years.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d1.html"
+    },
+    "cotton__herbicide_damage": {
+      "name_bn": "তুলায় আগাছানাশকের ক্ষতি",
+      "name_en": "Herbicide damage on cotton",
+      "what_bn": "এটি রোগ নয়। আগাছানাশক ছিটানোর সময় বা পাশের জমি থেকে বাতাসে উড়ে এসে এই রাসায়নিক ক্ষতি হয়। নতুন পাতা কুঁকড়ে বা মুচড়ে যায়, সরু ফিতার মতো হয়, অথবা হলুদ-সাদাটে হয়ে যায়।",
+      "what_en": "Not a disease: this is chemical injury from weed-killer spray or drift, and new leaves become cupped, twisted, narrow and strap-like, or yellow to bleached white.",
+      "steps_bn": [
+        "এখনই আর কোনো ওষুধ ছিটাবেন না; স্বাভাবিক সেচ ও সার দিন এবং নতুন পাতা স্বাভাবিক হচ্ছে কি না দেখুন — হালকা ক্ষতি সাধারণত কয়েক সপ্তাহে সেরে যায়।",
+        "কাছাকাছি কী ছিটানো হয়েছিল, কবে, আর তখন বাতাস কোন দিকে ছিল তা লিখে রাখুন। ভবিষ্যতে আগাছানাশক ছিটাতে হলে শুধু বাতাসহীন দিনে ছিটাবেন, আর আগাছানাশকের জন্য আলাদা স্প্রে মেশিন রাখুন — সেটি তুলায় ব্যবহার করবেন না।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Do not spray anything else now; give normal water and fertiliser and watch whether new leaves come out normal, since plants usually recover from mild injury in a few weeks.",
+        "Note what was sprayed nearby, when, and the wind direction; in future, if weed-killer must be sprayed, do it only on calm days and keep a separate sprayer for weed-killer that is never used on cotton.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://ask.ifas.ufl.edu/publication/AG367"
+    },
+    "cotton__jassids": {
+      "name_bn": "তুলার জ্যাসিড পোকা (পাতা ফড়িং)",
+      "name_en": "Cotton jassid (leafhopper)",
+      "what_bn": "এটি পোকার আক্রমণ; ছোট সবুজ পাতা ফড়িং পাতার নিচ থেকে রস চুষে খায়, ফলে পাতা হলুদ থেকে লালচে-তামাটে হয়ে নিচের দিকে কুঁকড়ে যায়।",
+      "what_en": "An insect pest: a small green wedge-shaped leafhopper sucks sap from the leaf underside, so leaves turn yellow, then red-brown, and curl downward ('hopper burn').",
+      "steps_bn": [
+        "পাতার নিচের দিক দেখুন এবং জমি ও আইল আগাছামুক্ত রাখুন, কারণ আগাছায় পোকা আশ্রয় নেয়।",
+        "অতিরিক্ত ইউরিয়া দেবেন না; পরের মৌসুমে লোমযুক্ত পাতার সহনশীল জাত বেছে নিন এবং আশপাশের কৃষকদের সাথে একই সময়ে বপন করুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Check the underside of leaves and keep the field and bunds weed-free, as weeds shelter the pest.",
+        "Do not over-apply urea; next season choose a hairy-leaf tolerant variety and sow at the same time as neighbouring farmers.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html"
+    },
+    "cotton__leaf_reddening": {
+      "name_bn": "তুলার পাতা লাল হয়ে যাওয়া",
+      "name_en": "Cotton leaf reddening",
+      "what_bn": "সাধারণত এটি সংক্রামক রোগ নয়; পুষ্টির ঘাটতি (বিশেষ করে নাইট্রোজেন, ফসফরাস, পটাশ বা ম্যাগনেসিয়াম), খরা, ঠান্ডা বা পাতা বুড়ো হওয়ার মতো চাপে পাতা লাল বা লালচে-বেগুনি হয়ে যায়।",
+      "what_en": "Usually not an infectious disease: stress such as nutrient shortage (mainly nitrogen, phosphorus, potash or magnesium), drought, cold or leaf ageing turns the leaves red or reddish-purple.",
+      "steps_bn": [
+        "পাতার নিচে জ্যাসিড পোকা আছে কি না দেখুন; পোকা না থাকলে কারণ সম্ভবত পুষ্টির ঘাটতি বা পানির অভাব।",
+        "মাটি শুকনো হলে সেচ দিন এবং মাটি পরীক্ষা করে সুপারিশমতো ইউরিয়া, টিএসপি, পটাশ বা ম্যাগনেসিয়াম সার দিন; মৌসুমের শেষে কেবল পুরনো পাতা লাল হলে তা স্বাভাবিক।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Look under the leaves for jassids; if there are none, the cause is likely nutrient shortage or lack of water.",
+        "Irrigate if the soil is dry, and get the soil tested so you apply urea, TSP, potash or magnesium only as recommended; reddening of only old leaves near season end is normal.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://news.utcrops.com/wp-content/uploads/2016/07/W-344-Red-Leaves-in-Cotton.pdf"
+    },
+    "cotton__leaf_variegation": {
+      "name_bn": "তুলার পাতায় সাদা-হলুদ ছোপ (ভ্যারিগেশন)",
+      "name_en": "Cotton leaf variegation",
+      "what_bn": "এটি একটি লক্ষণ, নির্দিষ্ট কোনো রোগ নয়; বংশগত (জিনগত) কারণ, ভাইরাস, পুষ্টির ঘাটতি বা আগাছানাশকের প্রভাবে পাতার কিছু অংশে সাদা বা হলুদ ছোপ হয় এবং পাশে স্বাভাবিক সবুজ অংশ থাকে।",
+      "what_en": "A symptom, not one specific disease: a genetic change, a virus, nutrient imbalance or weed-killer injury can cause white or yellow patches on parts of the leaf next to normal green tissue.",
+      "steps_bn": [
+        "শুধু এক-দুটি গাছে দেখা দিলে চিকিৎসার দরকার নেই; চাইলে ওই গাছগুলো তুলে ফেলতে পারেন।",
+        "অনেক গাছে একসাথে দেখা দিলে বা পাতা কুঁকড়েও গেলে এটি ভাইরাস, পুষ্টির সমস্যা বা আগাছানাশকের ক্ষতি হতে পারে — সাদা মাছি আছে কি না এবং কাছাকাছি আগাছানাশক ছিটানো হয়েছিল কি না দেখুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "If only one or two plants show it, no treatment is needed; you may simply pull those plants out.",
+        "If many plants show it, or the leaves also curl, it may be a virus, a nutrient problem or weed-killer injury, so check for whiteflies and ask whether weed-killer was sprayed nearby.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11424787/"
+    },
+    "cotton__verticillium_wilt": {
+      "name_bn": "তুলার ভার্টিসিলিয়াম ঢলে পড়া রোগ",
+      "name_en": "Cotton Verticillium wilt",
+      "what_bn": "মাটিবাহিত ছত্রাকজনিত রোগ। পাতার শিরাগুলোর মাঝের অংশে হলুদ ছোপ হয় এবং কিনারা শুকিয়ে বাঘের ডোরার মতো দেখায়। পরে পাতা ঢলে পড়ে।",
+      "what_en": "A soil-borne fungal disease; yellow patches form between the veins and the leaf edges dry, giving a 'tiger stripe' look before the leaves wilt.",
+      "steps_bn": [
+        "আক্রান্ত গাছ এবং ফসল তোলার পর অবশিষ্টাংশ তুলে নষ্ট করুন; গ্রীষ্মে গভীর চাষ দিন।",
+        "জমিতে জৈব সার দিন। দুই-তিন বছর এই জমিতে ধানের মতো এমন ফসল করুন, যে ফসলে এ রোগ হয় না।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove and destroy affected plants and crop remains after harvest; plough deeply in summer.",
+        "Add organic manure and rotate for 2–3 years with crops this disease does not attack, such as rice.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d2.html"
+    },
+    "eggplant__aphids": {
+      "name_bn": "বেগুনের জাব পোকা",
+      "name_en": "Eggplant aphids",
+      "what_bn": "এটি পোকার আক্রমণ। ছোট, নরম, সবুজ, হলুদ বা কালো পোকা পাতার নিচে ও কচি ডগায় দল বেঁধে রস চুষে খায়। ফলে পাতা আঠালো হয় এবং তার উপর কালো ঝুলের মতো ছত্রাক জন্মায়।",
+      "what_en": "An insect pest: small soft green, yellow or black insects cluster under leaves and on shoot tips sucking sap, leaving sticky honeydew that grows black sooty mould.",
+      "steps_bn": [
+        "বেশি আক্রান্ত পাতা ও কচি ডগা ছিঁড়ে নষ্ট করুন।",
+        "লেডিবার্ড বিটলসহ উপকারী পোকা রক্ষা করুন — উপ-সহকারী কৃষি কর্মকর্তার পরামর্শ ছাড়া কোনো স্প্রে করবেন না — এবং অতিরিক্ত ইউরিয়া দেবেন না।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pinch off and destroy heavily infested leaves and shoot tips.",
+        "Protect ladybird beetles and other natural enemies: do not spray anything unless your Sub-Assistant Agriculture Officer advises it, and avoid extra urea.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/eggplant/aphids/"
+    },
+    "eggplant__cercospora_leaf_spot": {
+      "name_bn": "বেগুনের সারকোস্পোরা পাতার দাগ রোগ",
+      "name_en": "Eggplant Cercospora leaf spot",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় হালকা হলুদ, কোণাকার বা এলোমেলো আকারের দাগ হয়। পরে দাগ ধূসর-বাদামি হয় এবং বেশি আক্রান্ত পাতা আগেভাগে ঝরে পড়ে।",
+      "what_en": "A fungal disease; pale yellow angular or irregular spots appear on leaves, later turn greyish-brown, and badly spotted leaves fall early.",
+      "steps_bn": [
+        "দাগযুক্ত নিচের পাতা ও ঝরে পড়া পাতা সরিয়ে নষ্ট করুন।",
+        "গাছের মাঝে পর্যাপ্ত দূরত্ব রাখুন, পাতায় না দিয়ে গোড়ায় পানি দিন এবং পরের মৌসুমে রোগ সহনশীল জাত লাগান।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove and destroy spotted lower leaves and fallen leaves.",
+        "Keep enough space between plants, water at the base instead of over the leaves, and grow a tolerant variety next season.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/brinjal_diseases_2.html"
+    },
+    "eggplant__flea_beetles": {
+      "name_bn": "বেগুনের ফ্লি বিটল (লাফানো ছোট পোকা)",
+      "name_en": "Eggplant flea beetles",
+      "what_bn": "এটি পোকার আক্রমণ; খুব ছোট চকচকে কালো বা বাদামি লাফানো পোকা পাতা খেয়ে অনেক ছোট ছোট গোল ছিদ্র করে, চারা গাছের ক্ষতি সবচেয়ে বেশি হয়।",
+      "what_en": "An insect pest: tiny shiny black or brown jumping beetles chew many small round 'shot holes' in the leaves and hurt young plants the most.",
+      "steps_bn": [
+        "চারা লাগানোর পর প্রথম এক মাস কয়েক দিন পরপর গাছ দেখুন এবং হলুদ বা সাদা আঠালো ফাঁদ লাগান।",
+        "জমি ও আশপাশের আগাছা ও ফসলের অবশিষ্টাংশ পরিষ্কার করুন; সম্ভব হলে চারা নেট দিয়ে ঢেকে রাখুন বা জমির ধারে ফাঁদ ফসল হিসেবে সরিষা লাগান।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Check young plants every few days during the first month after transplanting, and set yellow or white sticky traps.",
+        "Clear weeds and crop remains in and around the field; if possible cover seedlings with net or plant mustard on the field edge as a trap crop.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/eggplant/flea-beetle/"
+    },
+    "eggplant__leaf_wilt": {
+      "name_bn": "বেগুনের ঢলে পড়া রোগ",
+      "name_en": "Eggplant wilt (leaf wilting)",
+      "what_bn": "সাধারণত মাটিবাহিত ব্যাকটেরিয়া, ছত্রাক বা কৃমির কারণে এ রোগ হয়। এর মধ্যে ব্যাকটেরিয়াজনিত ঢলে পড়া সবচেয়ে বেশি দেখা যায়। সবুজ পাতা দিনের বেলা নেতিয়ে পড়ে, পরে পুরো গাছ মারা যায়। তবে মাটিতে পানির অভাবেও পাতা নেতিয়ে পড়তে পারে।",
+      "what_en": "Usually a soil-borne bacterial, fungal or nematode problem (bacterial wilt is most common) that makes green leaves droop by day and later kills the whole plant, though dry soil can cause similar wilting.",
+      "steps_bn": [
+        "মাটি শুকনো হলে আগে সেচ দিন। ভেজা মাটিতেও গাছ ঢলে পড়লে কাণ্ড কেটে কাটা মাথাটি এক গ্লাস পরিষ্কার পানিতে ডুবিয়ে রাখুন। দুধের মতো সাদা সুতা বের হলে এটি ব্যাকটেরিয়াজনিত ঢলে পড়া রোগ। তখন গাছটি শিকড়সহ তুলে নষ্ট করুন।",
+        "কয়েক বছর ওই জমিতে বেগুন, টমেটো, মরিচ বা আলু না করে বাঁধাকপি বা ফুলকপির মতো অন্য ফসল করুন, অথবা বন বেগুনের সাথে জোড়কলম (গ্রাফটিং) করা চারা লাগান।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "If the soil is dry, water first. If a plant still wilts in moist soil, cut its stem and stand it in a glass of clean water; milky threads mean bacterial wilt, so uproot and destroy that plant.",
+        "For the next few years do not plant brinjal, tomato, chilli or potato in that land (grow cabbage, cauliflower or other crops instead), or use seedlings grafted onto wild brinjal rootstock.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://ais.gov.bd/pages/krishi-kotha/%E0%A6%A2%E0%A6%B2%E0%A7%87-%E0%A6%AA%E0%A7%9C%E0%A6%BE-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%A3%E0%A7%87-%E0%A6%AC%E0%A7%87%E0%A6%97%E0%A7%81%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AB%E0%A6%9F%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BF-83f93d-6922d94cdbfbab28ce04afb7"
+    },
+    "eggplant__phytophthora_blight": {
+      "name_bn": "বেগুনের ফাইটোফথোরা ব্লাইট (পাতা ও ফল পচা)",
+      "name_en": "Eggplant Phytophthora blight",
+      "what_bn": "এটি ছত্রাকের মতো এক ধরনের জীবাণুর রোগ, ভেজা ও পানি জমে থাকা মাটিতে বেশি হয়। পাতায় গাঢ় পানিভেজা দাগ হয়, যা শুকিয়ে হালকা বাদামি হয়ে যায়। কাণ্ড ও ফলও পচে যায়।",
+      "what_en": "A fungus-like water-mould disease of wet, poorly drained soil; leaves get dark water-soaked patches that dry to light brown, and stems and fruits rot.",
+      "steps_bn": [
+        "জমিতে জমে থাকা পানি এখনই নালা কেটে বের করে দিন; পরের বার উঁচু বেডে চারা লাগান।",
+        "আক্রান্ত গাছ ও ফল তুলে নষ্ট করুন, পাতায় নয় গোড়ায় পানি দিন এবং অন্তত ৩ বছর ওই জমিতে বেগুন, টমেটো, মরিচ বা লাউ-কুমড়া জাতীয় ফসল করবেন না।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Drain standing water at once by cutting channels; next time plant on raised beds.",
+        "Remove and destroy infected plants and fruits, water at the base rather than over the leaves, and for at least 3 years do not grow brinjal, tomato, chilli, gourds or pumpkins in that land.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://extension.umd.edu/resource/phytophthora-vegetables"
+    },
+    "eggplant__powdery_mildew": {
+      "name_bn": "বেগুনের পাউডারি মিলডিউ (সাদা গুঁড়া) রোগ",
+      "name_en": "Eggplant powdery mildew",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতার উপরের পিঠে হলুদ ছোপ দেখা যায় এবং নিচের পিঠে হালকা সাদা গুঁড়ার মতো আস্তরণ থাকে। পরে পাতা শুকিয়ে ঝরে পড়ে।",
+      "what_en": "A fungal disease; yellow patches appear on the upper side of leaves with a thin white powdery growth underneath, and leaves later dry and fall.",
+      "steps_bn": [
+        "বেশি আক্রান্ত পাতা ছিঁড়ে নষ্ট করুন এবং জমির আশপাশের আগাছা পরিষ্কার করুন।",
+        "গাছে রোদ-বাতাস লাগার জন্য গাছের মাঝে সঠিক দূরত্ব রাখুন। অতিরিক্ত ইউরিয়া দেবেন না।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off and destroy badly affected leaves and clear weeds around the field.",
+        "Keep proper spacing so plants get sun and air, and avoid extra urea.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://ipm.ucanr.edu/home-and-landscape/powdery-mildew-on-vegetables/"
+    },
+    "eggplant__tobacco_mosaic_virus": {
+      "name_bn": "বেগুনের তামাক মোজাইক ভাইরাস রোগ",
+      "name_en": "Eggplant tobacco mosaic virus",
+      "what_bn": "হাত, যন্ত্রপাতি ও আক্রান্ত গাছের অবশিষ্টাংশের মাধ্যমে ছড়ানো ভাইরাস রোগ; পাতায় হালকা ও গাঢ় সবুজ ছোপ (মোজাইক) ও ফোসকা পড়ে এবং পাতা ছোট ও বিকৃত হয়।",
+      "what_en": "A virus spread by hands, tools and infected plant debris; leaves show light and dark green mosaic patches and blisters, and become small and misshapen.",
+      "steps_bn": [
+        "আক্রান্ত গাছ তুলে মাটিতে পুঁতে বা পুড়িয়ে ফেলুন। সুস্থ গাছ ধরার আগে সাবান দিয়ে হাত ধুয়ে নিন। কাজের সময় বিড়ি-সিগারেট বা তামাক-জর্দা খাবেন না।",
+        "আগাছা পরিষ্কার রাখুন, বীজতলার কাছে টমেটো, মরিচ, তামাক বা শসা লাগাবেন না এবং পরের বার সুস্থ গাছের বীজ ব্যবহার করুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Uproot infected plants and bury or burn them; wash hands with soap before touching healthy plants, and do not smoke or chew tobacco while working.",
+        "Keep weeds out, do not grow tomato, chilli, tobacco or cucumber near the seedbed, and use seed from healthy plants next time.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/brinjal_diseases_5.html"
+    },
+    "moringa__bacterial_leaf_spot": {
+      "name_bn": "সজিনার ব্যাকটেরিয়াজনিত পাতার দাগ রোগ",
+      "name_en": "Moringa bacterial leaf spot",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ; পাতায় ছোট গাঢ় পানিভেজা দাগ হয়, অনেক সময় দাগের চারপাশে হলুদ বলয় থাকে এবং বেশি আক্রান্ত পাতা ঝরে পড়ে।",
+      "what_en": "A bacterial disease; small dark, water-soaked spots appear on the leaflets, often with a yellow halo, and badly spotted leaflets drop.",
+      "steps_bn": [
+        "দাগযুক্ত ডাল-পাতা ছেঁটে এবং ঝরে পড়া পাতা কুড়িয়ে নষ্ট করুন; পাতা ভেজা থাকলে গাছে কাজ করবেন না।",
+        "পানি দেওয়ার সময় পাতা ভেজাবেন না, গোড়ায় পানি জমতে দেবেন না এবং ঘন ডাল ছেঁটে বাতাস চলাচল বাড়ান।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Prune spotted twigs and collect fallen leaves to destroy them; do not work on the tree while the leaves are wet.",
+        "Do not wet the leaves when watering, keep water from standing at the base, and thin crowded branches for air flow.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://web.extension.illinois.edu/hortanswers/detailproblem.cfm?PathogenID=152"
+    },
+    "moringa__cercospora_leaf_spot": {
+      "name_bn": "সজিনার সারকোস্পোরা পাতার দাগ রোগ",
+      "name_en": "Moringa Cercospora leaf spot",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় ছড়ানো-ছিটানো বাদামি দাগ হয়। দাগগুলো মিশে গিয়ে পাতা ঝলসানো দেখায়, পরে পাতা হলুদ হয়ে আগেভাগে ঝরে যায়।",
+      "what_en": "A fungal disease; scattered brown spots appear on the leaflets and merge into a blighted look, and the leaves turn yellow and fall early.",
+      "steps_bn": [
+        "দাগযুক্ত পাতা ছিঁড়ে এবং ঝরে পড়া পাতা কুড়িয়ে নষ্ট করুন, কারণ ছত্রাক এসব পাতায় বেঁচে থাকে।",
+        "ঘন ডাল ছেঁটে রোদ-বাতাস ঢোকার ব্যবস্থা করুন এবং গাছের চারপাশ আগাছামুক্ত রাখুন।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Collect and destroy fallen and spotted leaves, because the fungus survives on them.",
+        "Prune crowded branches to let in sun and air, and keep the area around the tree weed-free.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/horticulture/pdf/Moringa%20English%20book.pdf#page=63"
+    },
+    "moringa__yellow_leaf": {
+      "name_bn": "সজিনার পাতা হলুদ হয়ে যাওয়া",
+      "name_en": "Moringa yellow leaf",
+      "what_bn": "সাধারণত এটি আলাদা কোনো রোগ নয়; জলাবদ্ধতা ও শিকড় পচা, নাইট্রোজেনের ঘাটতি বা রস শোষক পোকার কারণে পাতা ফ্যাকাশে ও হলুদ হয়ে যায়।",
+      "what_en": "Usually not a single disease: waterlogging and root rot, nitrogen shortage or sap-sucking insects make the leaflets turn pale and yellow.",
+      "steps_bn": [
+        "গাছের গোড়ায় পানি জমে থাকলে এখনই নালা কেটে বের করে দিন — সজিনা জলাবদ্ধতা সহ্য করতে পারে না।",
+        "পাতার নিচে জাব পোকা বা সাদা মাছি আছে কি না দেখুন; না থাকলে পচা গোবর বা জৈব সার দিন। শুধু নিচের পুরনো পাতা হলুদ হওয়া স্বাভাবিক।",
+        "সমস্যা না কমলে বা নিশ্চিত হতে এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "If water stands around the tree, drain it at once, because moringa cannot tolerate waterlogging.",
+        "Look under the leaves for aphids or whiteflies; if there are none, add well-rotted cow dung or compost. Yellowing of only the old lower leaves is normal.",
+        "If it does not improve or you are unsure, contact your local Sub-Assistant Agriculture Officer or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://agritech.tnau.ac.in/horticulture/pdf/Moringa%20English%20book.pdf"
+    },
+    "papaya__bacterial_blight": {
+      "name_bn": "পেঁপের ব্যাকটেরিয়াজনিত পাতা ঝলসানো রোগ",
+      "name_en": "Papaya bacterial blight",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ; পাতায় ছোট পানিভেজা দাগ পড়ে যা পরে বাদামি হয়। দাগ প্রায়ই কোণাকার হয় এবং চারপাশে হলুদ আভা থাকে। দাগ মিলে পাতা ঝলসানো দেখায়।",
+      "what_en": "Caused by bacteria; small water-soaked spots on the leaf turn brown, often angular with a yellow halo, and join until the leaf looks scorched.",
+      "steps_bn": [
+        "আক্রান্ত পাতা কেটে বাগান থেকে দূরে পুঁতে বা পুড়িয়ে ফেলুন।",
+        "পাতা ভেজা থাকলে গাছে কাজ করবেন না এবং পাতার ওপর পানি না দিয়ে গোড়ায় সেচ দিন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Cut off infected leaves and bury or burn them away from the orchard.",
+        "Do not work among the plants while leaves are wet, and water at the base instead of over the leaves.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://plantvillage.psu.edu/topics/papaya-pawpaw/infos"
+    },
+    "papaya__carica_insect_hole": {
+      "name_bn": "পেঁপে পাতায় পোকার ছিদ্র",
+      "name_en": "Papaya leaf insect holes",
+      "what_bn": "এটি কোনো রোগ নয় — শুঁড় পোকা (উইভিল), গুবরে পোকা, ঘাসফড়িং বা শুঁয়োপোকা জাতীয় পোকা পাতা খেয়ে ছিদ্র করে বা পাতার কিনারা খাঁজকাটা করে ফেলে।",
+      "what_en": "Not a disease: chewing insects such as weevils, beetles, grasshoppers or caterpillars eat the leaf, leaving holes or notched edges.",
+      "steps_bn": [
+        "সকালে বা বিকালে পাতার দুই দিক দেখে পোকা খুঁজুন এবং হাত দিয়ে ধরে মেরে ফেলুন।",
+        "বাগান আগাছা ও ঝরে পড়া পাতামুক্ত রাখুন, যাতে পোকা লুকানোর জায়গা না পায়।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Check both sides of the leaves in the morning or evening, then hand-pick and kill the insects.",
+        "Keep the orchard free of weeds and fallen leaves so insects have fewer places to hide.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "http://agritech.tnau.ac.in/crop_protection/papaya_pest/papaya_3.html"
+    },
+    "papaya__curled_yellow_spot": {
+      "name_bn": "পেঁপের পাতা কোঁকড়ানো (লিফ কার্ল) ও হলুদ দাগ",
+      "name_en": "Papaya leaf curl with yellow spots",
+      "what_bn": "সাধারণত সাদা মাছি দিয়ে ছড়ানো পাতা কোঁকড়ানো ভাইরাসের কারণে হয়; কখনো কখনো রস চোষা পোকার সরাসরি ক্ষতিতেও হয়। পাতা নিচে ও ভেতরের দিকে কুঁকড়ে যায়, কুঁচকে চামড়ার মতো শক্ত হয় এবং হলুদ দাগ পড়ে।",
+      "what_en": "Usually caused by leaf curl virus spread by whitefly (sometimes by sap-sucking pests directly); leaves curl downward and inward, turn crinkled and leathery, and show yellow spots.",
+      "steps_bn": [
+        "বেশি কোঁকড়ানো গাছ তুলে নষ্ট করে ফেলুন, যাতে অন্য গাছে না ছড়ায়; ভাইরাস হলে কোনো স্প্রে দিয়ে সারে না।",
+        "সাদা মাছি ধরতে হলুদ আঠালো ফাঁদ লাগান, আগাছা পরিষ্কার রাখুন এবং পেঁপের কাছে টমেটো বা তামাক চাষ করবেন না।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Uproot and destroy badly curled plants so the problem does not spread; if it is the virus, no spray will cure it.",
+        "Hang yellow sticky traps for whitefly, keep weeds down, and do not grow tomato or tobacco next to papaya.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/papaya_diseases_4.html"
+    },
+    "papaya__mosaic_virus": {
+      "name_bn": "পেঁপের মোজাইক (রিং স্পট) ভাইরাস রোগ",
+      "name_en": "Papaya mosaic (ringspot) virus",
+      "what_bn": "জাব পোকা দিয়ে ছড়ানো ভাইরাসজনিত রোগ; পাতায় হলুদ ও গাঢ় সবুজ ছোপ ছোপ মোজাইক, ফোসকার মতো উঁচু অংশ ও কোঁকড়ানো ভাব দেখা যায় এবং গাছ খাটো হয়ে যায়।",
+      "what_en": "Caused by a virus spread by aphids; leaves show yellow and dark-green mosaic patches, blisters and crinkling, and the plant becomes stunted.",
+      "steps_bn": [
+        "আক্রান্ত গাছ দেখামাত্র তুলে নষ্ট করুন; ভাইরাস রোগ কোনো স্প্রে দিয়ে সারে না।",
+        "ভাইরাসমুক্ত চারা লাগান, বাগানের চারপাশে ভুট্টা বা জোয়ার লাগান এবং পেঁপের পাশে লাউ-কুমড়া জাতীয় ফসল চাষ করবেন না।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Uproot and destroy infected plants as soon as you see them; a virus cannot be cured by spraying.",
+        "Use virus-free seedlings, plant maize or sorghum as a border, and do not grow gourd-family crops next to papaya.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/papaya_diseases_3.html"
+    },
+    "papaya__other_disease": {
+      "name_bn": "পেঁপের অন্যান্য রোগ বা সমস্যা",
+      "name_en": "Other papaya disease",
+      "what_bn": "পাতায় সমস্যার লক্ষণ আছে কিন্তু তা প্রধান কোনো রোগের সাথে মেলেনি — এটি ছত্রাক, ব্যাকটেরিয়া, ভাইরাস, পোকা বা পুষ্টির অভাবজনিত সমস্যা হতে পারে, তাই ভালো করে পরীক্ষা করা দরকার।",
+      "what_en": "The leaf shows a problem that does not match the main classes; it may be fungal, bacterial, viral, an insect pest or a nutrient shortage, so it needs a closer look.",
+      "steps_bn": [
+        "পাতার দুই দিক ও পুরো গাছের পরিষ্কার ছবি তুলুন এবং পাতার নিচে পোকা আছে কিনা দেখুন।",
+        "বেশি ক্ষতিগ্রস্ত পাতা সরিয়ে নষ্ট করুন এবং বাগান পরিষ্কার ও পানি নিষ্কাশনের ব্যবস্থা ভালো রাখুন।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Take clear photos of both sides of the leaf and of the whole plant, and check under the leaves for insects.",
+        "Remove and destroy badly damaged leaves, and keep the orchard clean and well drained.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "https://blog.plantwise.org/2024/04/03/common-papaya-disorders-a-comprehensive-guide/"
+    },
+    "papaya__yellow_necrotic_spots_holes": {
+      "name_bn": "পেঁপে পাতায় হলুদ মরা দাগ ও ছিদ্র",
+      "name_en": "Papaya yellow necrotic spots with holes",
+      "what_bn": "সাধারণত ছত্রাক বা ব্যাকটেরিয়াজনিত পাতার দাগ রোগ; প্রথমে হলুদ দাগ পড়ে, দাগের মাঝখান বাদামি হয়ে মরে যায় এবং পরে মরা অংশ ঝরে গিয়ে ছিদ্র হয়। পাতার বেশিরভাগ অংশ উজ্জ্বল হলুদ হয়ে গেলে ভাইরাস বা পুষ্টির অভাবও কারণ হতে পারে।",
+      "what_en": "Usually a fungal or bacterial leaf spot: yellow spots turn brown and dead in the centre, and the dead tissue later falls out, leaving holes. If most of the leaf turns bright yellow, a virus or a nutrient shortage may also be involved.",
+      "steps_bn": [
+        "দাগওয়ালা ও ঝরে পড়া পাতা সংগ্রহ করে নষ্ট করুন।",
+        "পাতার ওপর পানি দেবেন না, পানি নিষ্কাশনের নালা পরিষ্কার রাখুন এবং গাছের চারপাশে বাতাস চলাচলের জায়গা রাখুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Collect and destroy spotted and fallen leaves.",
+        "Avoid wetting the leaves, keep drains clear, and leave room for air to move around the plants.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://apps.lucidcentral.org/ppp/text/web_full/entities/papaya_brown_spot_300.htm"
+    },
+    "rice__bacterial_leaf_blight": {
+      "name_bn": "ধানের ব্যাকটেরিয়াজনিত পাতাপোড়া রোগ",
+      "name_en": "Bacterial leaf blight",
+      "what_bn": "এটি ব্যাকটেরিয়াজনিত রোগ; পাতার আগা বা কিনারা থেকে পানিচোষা হলদে দাগ নিচের দিকে বাড়ে এবং পাতা খড়ের মতো শুকিয়ে যায়, কচি গাছ নেতিয়েও পড়তে পারে।",
+      "what_en": "A bacterial disease in which water-soaked yellow streaks spread down from the leaf tip or edges until the leaf dries like straw; young plants may also wilt.",
+      "steps_bn": [
+        "রোগ দেখা দিলে ইউরিয়া সারের উপরি প্রয়োগ বন্ধ রাখুন। ঝড়-বৃষ্টির পরেও ইউরিয়া দেবেন না। পটাশ সার উপরি প্রয়োগ করলে রোগ কমে; পরিমাণ উপ-সহকারী কৃষি কর্মকর্তার কাছে জেনে নিন।",
+        "চারা বা কুশি নেতিয়ে পড়লে (ক্রিসেক) জমির পানি বের করে দিন। ৫ থেকে ১০ দিন জমি শুকাতে দিন, তারপর আবার সেচ দিন।",
+        "এই জমির ধান বীজ হিসেবে রাখবেন না; ধান কাটার পর আক্রান্ত নাড়া ও খড় নষ্ট করে ফেলুন।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Stop urea top-dressing once the disease appears, and do not apply urea after storms or heavy rain. A potash top-dressing reduces the disease; ask your Sub-Assistant Agriculture Officer how much to use.",
+        "If seedlings or tillers wilt (kresek), drain the field, let it dry for 5-10 days, then irrigate again.",
+        "Do not keep seed from this field. After harvest, destroy infected stubble and straw.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_10/Factsheet2%20-%20Patapora%20rog.pdf"
+    },
+    "rice__bacterial_leaf_streak": {
+      "name_bn": "ধানের পাতার লালচে রেখা রোগ",
+      "name_en": "Bacterial leaf streak",
+      "what_bn": "এটি ব্যাকটেরিয়াজনিত রোগ; পাতার শিরার ফাঁকে ফাঁকে সরু হালকা রেখা পড়ে (সূর্যের দিকে ধরলে ভেতর দিয়ে আলো দেখা যায়), পরে রেখাগুলো মিশে লালচে হয়ে যায়।",
+      "what_en": "A bacterial disease that makes thin, see-through streaks between the leaf veins, which later join and turn reddish brown.",
+      "steps_bn": [
+        "জমিতে একটানা গভীর পানি না রেখে পর্যায়ক্রমে পানি দিন ও শুকান।",
+        "বাড়তি ইউরিয়া সার দেবেন না, বিশেষ করে মৌসুমের শেষের দিকে। সুষম সার (ইউরিয়া, টিএসপি, পটাশ) দিন।",
+        "এই জমির ধান বীজ হিসেবে রাখবেন না; ধান কাটার পর আক্রান্ত নাড়া নষ্ট করুন।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Instead of keeping deep standing water, alternately irrigate and drain the field.",
+        "Do not give extra urea, especially late in the season. Give balanced fertiliser (urea, TSP and potash).",
+        "Do not keep seed from this field. After harvest, destroy infected stubble.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/26"
+    },
+    "rice__blast": {
+      "name_bn": "ধানের ব্লাস্ট রোগ",
+      "name_en": "Rice blast",
+      "what_bn": "এটি ছত্রাকজনিত রোগ; পাতায় চোখের মতো দাগ পড়ে, যার দুই মাথা সরু, মাঝখান ধূসর বা সাদাটে আর কিনারা বাদামি।",
+      "what_en": "A fungal disease that makes eye-shaped spots on the leaf, pointed at both ends, with grey or whitish centres and brown edges.",
+      "steps_bn": [
+        "জমিতে সবসময় পানি ধরে রাখুন, মাটি শুকাতে দেবেন না।",
+        "এখন আর বাড়তি ইউরিয়া সার দেবেন না; কুশি অবস্থায় রোগ দেখা দিলে পটাশ সার উপরি প্রয়োগ করে সেচ দিলে উপকার হয় — পরিমাণ উপ-সহকারী কৃষি কর্মকর্তার কাছে জেনে নিন।",
+        "এই জমির ধান বীজ হিসেবে রাখবেন না।",
+        "ধানে থোড় বা শীষ আসার সময় হলে দেরি না করে আজই আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন — শীষে ব্লাস্ট হলে পুরো ফলন নষ্ট হতে পারে। অন্য সময়েও পরামর্শের জন্য তাঁর সাথে যোগাযোগ করুন।"
+      ],
+      "steps_en": [
+        "Keep water standing in the field; do not let the soil dry out.",
+        "Stop giving extra urea for now. If the disease appears at the tillering stage, a potash top-dressing followed by irrigation helps; ask your Sub-Assistant Agriculture Officer how much to use.",
+        "Do not keep seed from this field.",
+        "If the crop is close to booting or heading, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123 today, because blast on the panicle (neck blast) can destroy the whole yield. At other times, contact them for further advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/10"
+    },
+    "rice__brown_spot": {
+      "name_bn": "ধানের বাদামি দাগ রোগ",
+      "name_en": "Brown spot",
+      "what_bn": "এটি ছত্রাকজনিত রোগ; পাতায় তিলের দানার মতো ছোট ছোট বাদামি দাগ পড়ে, দাগের চারপাশে অনেক সময় হলুদ আভা থাকে।",
+      "what_en": "A fungal disease that makes small oval brown spots, like sesame seeds, on the leaf, often with a yellow ring around them.",
+      "steps_bn": [
+        "মাটিতে খাদ্য উপাদান বা পানির অভাব হলে এ রোগ বাড়ে — জমিতে সুষম সার ও জৈব সার দিন এবং মাটি যেন শুকিয়ে না যায় খেয়াল রাখুন।",
+        "এই জমির ধান বীজ হিসেবে রাখবেন না; পরের মৌসুমে সুস্থ বীজ ব্যবহার করুন।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "This disease gets worse when the soil lacks nutrients or water. Give balanced fertiliser plus compost or organic manure, and keep the soil from drying out.",
+        "Do not keep seed from this field; use healthy seed next season.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_10/Factsheet7%20-%20Badami%20dag%20rog.pdf"
+    },
+    "rice__dead_heart": {
+      "name_bn": "মরা ডিগ (মাজরা পোকার ক্ষতি)",
+      "name_en": "Dead heart (stem borer damage)",
+      "what_bn": "এটি রোগ নয়, মাজরা পোকার ক্ষতি — এর কীড়া কাণ্ডের ভেতরে ঢুকে মাঝের ডিগ পাতার গোড়া কেটে দেয়। ফলে ডিগটি শুকিয়ে মরে যায় এবং টান দিলে সহজে উঠে আসে।",
+      "what_en": "Not a disease but stem borer damage: a caterpillar inside the stem cuts the central shoot, so the middle leaf dries and dies and pulls out easily.",
+      "steps_bn": [
+        "পাতার আগায় মাজরা পোকার ডিমের গাদা খুঁজে সংগ্রহ করে নষ্ট করুন; হাতজাল দিয়ে মথ ধরে মেরে ফেলুন।",
+        "জমিতে ডালপালা বা বাঁশের কঞ্চি পুঁতে দিন যাতে পাখি বসে মথ খেতে পারে; মথ বেশি দেখা গেলে সন্ধ্যায় ধানক্ষেত থেকে ২০০-৩০০ মিটার দূরে আলোর ফাঁদ বসান।",
+        "বাড়তি ইউরিয়া সার ও এলোপাথাড়ি কীটনাশক ব্যবহার করবেন না।",
+        "মরা ডিগ বেশি হলে কী করতে হবে জানতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Look for egg masses near the leaf tips, then collect and destroy them. Catch the moths with a hand net.",
+        "Push branches or bamboo sticks into the field so birds can perch and eat the moths. When many moths are seen, set a light trap in the evening 200-300 metres away from the rice field.",
+        "Do not use extra urea, and do not spray pesticides at random.",
+        "If you see many dead hearts, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/16"
+    },
+    "rice__downy_mildew": {
+      "name_bn": "ধানের ডাউনি মিলডিউ রোগ",
+      "name_en": "Downy mildew (crazy top)",
+      "what_bn": "এটি কম দেখা যায় এমন একটি রোগ; ছত্রাকের মতো এক ধরনের জীবাণু এ রোগ ঘটায়। জলাবদ্ধ মাটিতে চারা আক্রান্ত হয়, গাছ খাটো ও মোচড়ানো হয় এবং পাতায় হলদে-সাদা দাগ বা রেখা দেখা যায়।",
+      "what_en": "An uncommon fungus-like (water mould) disease of seedlings in waterlogged soil that leaves plants stunted and twisted, with yellow-white spots or stripes on the leaves.",
+      "steps_bn": [
+        "জমির নিচু জায়গা বা বীজতলায় জমে থাকা বাড়তি পানি বের করে দিন।",
+        "খাটো ও মোচড়ানো গাছ তুলে নষ্ট করুন এবং জমি ও আইলের ঘাসজাতীয় আগাছা পরিষ্কার করুন, কারণ এগুলোতে রোগের জীবাণু থাকতে পারে।",
+        "শুধু রোগমুক্ত জমির ধান বীজ হিসেবে রাখুন।",
+        "এই রোগ অন্য সমস্যার মতো দেখাতে পারে, তাই নিশ্চিত হতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Drain excess water from low spots in the field and from the seedbed.",
+        "Pull out and destroy stunted, twisted plants, and clear grassy weeds from the field and bunds, because they can carry the disease.",
+        "Keep seed only from disease-free fields.",
+        "This disease can look like other problems. To confirm it, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://www.cabidigitallibrary.org/doi/10.1079/cabicompendium.49243"
+    },
+    "rice__hispa": {
+      "name_bn": "ধানের পামরি পোকা",
+      "name_en": "Rice hispa",
+      "what_bn": "এটি রোগ নয়, পোকার ক্ষতি — কাঁটাওয়ালা কালো পামরি পোকা পাতা চেঁছে খেয়ে লম্বা সাদা দাগ ফেলে, আর এর কীড়া পাতার ভেতরে সুড়ঙ্গ করে সাদা ছোপ তৈরি করে।",
+      "what_en": "Not a disease but an insect pest: the small spiny black hispa beetle scrapes long white streaks on the leaf, and its grubs tunnel inside the leaf, making white blotches.",
+      "steps_bn": [
+        "হাতজাল দিয়ে পূর্ণবয়স্ক পামরি পোকা ধরে মেরে ফেলুন।",
+        "যে পাতার ভেতরে কীড়া সুড়ঙ্গ করেছে, সেই পাতা গোড়া থেকে একটু উপরে কেটে নষ্ট করুন — তবে কাইচথোড় আসার পর পাতা কাটবেন না, এতে ফলন কমে।",
+        "আইল ও আশেপাশের আগাছা পরিষ্কার করুন এবং বাড়তি ইউরিয়া দেবেন না।",
+        "কীটনাশক লাগবে কি না জানতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Catch the adult beetles with a hand net and destroy them.",
+        "Cut off leaves where grubs are tunnelling, a little above the base, and destroy them, but do not cut leaves once the young ear has started to form inside the stem (panicle initiation), because that lowers yield.",
+        "Clear weeds from bunds and nearby areas, and do not give extra urea.",
+        "To find out whether any treatment is needed, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_9/Factsheet5%20-%20Pamri%20Poka.pdf"
+    },
+    "rice__insect": {
+      "name_bn": "ধানে পোকার আক্রমণ",
+      "name_en": "Insect damage (type unknown)",
+      "what_bn": "পাতায় পোকা খাওয়া, চেঁছে খাওয়া বা রস চোষার ক্ষতির চিহ্ন আছে, তবে ছবি থেকে কোন পোকা তা বোঝা যাচ্ছে না — জমিতে গিয়ে পোকাটি খুঁজে দেখা দরকার।",
+      "what_en": "The leaf shows insect damage from chewing, scraping or sucking, but the photo does not show which insect, so it needs to be found in the field.",
+      "steps_bn": [
+        "জমি ঘুরে পাতার দুই পাশ ও গাছের গোড়া ভালো করে দেখুন। হাতজাল দিয়ে কয়েকটি পোকা ধরে রাখুন, যাতে উপ-সহকারী কৃষি কর্মকর্তাকে দেখাতে পারেন।",
+        "জমিতে ডালপালা বা বাঁশের কঞ্চি পুঁতে পাখি বসার ব্যবস্থা করুন; রাতে আলোর ফাঁদ বসালে কোন পোকা আছে বোঝা যাবে।",
+        "এলোপাথাড়ি কীটনাশক ও বাড়তি ইউরিয়া দেবেন না — উপকারী পোকা, মাকড়সা ও ব্যাঙ ক্ষতিকর পোকা খেয়ে ফেলে।",
+        "পোকা চিনে সঠিক ব্যবস্থা নিতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Walk the field and check both sides of the leaves and the base of the plants. Catch a few insects with a hand net to show your Sub-Assistant Agriculture Officer.",
+        "Push branches or bamboo sticks into the field so birds can perch. A light trap at night shows which insects are present.",
+        "Do not spray at random or give extra urea; friendly insects, spiders and frogs eat the harmful pests.",
+        "To identify the insect and choose the right action, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_9/Factsheet19%20-%20Integrated%20Pest%20Management.pdf"
+    },
+    "rice__leaf_scald": {
+      "name_bn": "ধানের পাতা ফোস্কা রোগ",
+      "name_en": "Leaf scald",
+      "what_bn": "এটি ছত্রাকজনিত রোগ; পাতার আগা বা কিনারা থেকে ভেজা ভেজা দাগ শুরু হয়ে গাঢ় ও হালকা বাদামি ঢেউয়ের মতো ডোরা তৈরি করে নিচে নামে এবং পাতা খড়ের মতো শুকিয়ে যায়।",
+      "what_en": "A fungal disease that starts as water-soaked patches at the leaf tip or edge, which spread down in wavy bands of dark and light brown until the leaf dries like straw.",
+      "steps_bn": [
+        "আক্রান্ত পাতার একটি টুকরা কেটে স্বচ্ছ গ্লাসে পরিষ্কার পানিতে ৫ থেকে ১০ মিনিট ডুবিয়ে রাখুন। কাটা মুখ থেকে দুধের মতো ঘোলা রস বের হলে সম্ভবত এটি ব্যাকটেরিয়াজনিত পাতাপোড়া রোগ। কিছু বের না হলে এটি পাতা ফোস্কা রোগ।",
+        "বাড়তি ইউরিয়া দেবেন না এবং জমি ও আইল আগাছামুক্ত রাখুন।",
+        "এই জমির ধান বীজ হিসেবে রাখবেন না; ধান কাটার পর আক্রান্ত খড়কুটা নষ্ট করুন।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Cut a piece of an affected leaf and dip it in clean water in a clear glass for 5-10 minutes. Milky ooze from the cut end most likely means bacterial leaf blight; no ooze means leaf scald.",
+        "Do not give extra urea, and keep the field and bunds weed-free.",
+        "Do not keep seed from this field. After harvest, destroy infected straw and stubble.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/35"
+    },
+    "rice__leaffolder": {
+      "name_bn": "ধানের পাতা মোড়ানো পোকা",
+      "name_en": "Rice leaffolder",
+      "what_bn": "এটি রোগ নয়, পোকার ক্ষতি — পাতা মোড়ানো পোকার কীড়া পাতা লম্বালম্বি মুড়িয়ে ভেতরের সবুজ অংশ খায়, ফলে পাতায় লম্বা সাদা দাগ দেখা যায়।",
+      "what_en": "Not a disease but an insect pest: the leaffolder caterpillar rolls the leaf lengthwise into a tube and eats the green inside, leaving long white streaks.",
+      "steps_bn": [
+        "শুরুর দিকে কীড়া বা ডিমসহ মোড়ানো পাতা তুলে নষ্ট করুন।",
+        "জমিতে ডালপালা বা বাঁশের কঞ্চি পুঁতে পাখি বসার ব্যবস্থা করুন এবং আলোর ফাঁদ দিয়ে মথ ধরে মেরে ফেলুন।",
+        "বাড়তি ইউরিয়া সার দেবেন না এবং এলোপাথাড়ি কীটনাশক স্প্রে করবেন না; পাতার অল্প ক্ষতিতে স্প্রে করার দরকার হয় না।",
+        "ক্ষতি কতটা হলে ব্যবস্থা নিতে হবে জানতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "In the early stage, pick folded leaves that hold caterpillars or eggs and destroy them.",
+        "Push branches or bamboo sticks into the field so birds can perch, and use a light trap to catch the moths.",
+        "Do not give extra urea or spray at random; a little leaf damage does not need spraying.",
+        "To learn how much damage needs treatment, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/1"
+    },
+    "rice__narrow_brown_spot": {
+      "name_bn": "ধানের সরু বাদামি দাগ রোগ",
+      "name_en": "Narrow brown spot",
+      "what_bn": "এটি ছত্রাকজনিত রোগ; পাতায় শিরার সমান্তরালে ছোট, সরু ও লম্বাটে বাদামি দাগ পড়ে, সাধারণত মৌসুমের শেষ দিকে এবং পটাশের ঘাটতি আছে এমন জমিতে।",
+      "what_en": "A fungal disease that makes short, thin brown lines along the leaf veins, usually late in the season and in potash-poor soil.",
+      "steps_bn": [
+        "জমিতে সুষম সার দিন, বিশেষ করে পটাশের যেন ঘাটতি না থাকে — পটাশের অভাবে এ রোগ বাড়ে।",
+        "জমিতে পর্যায়ক্রমে পানি দিন ও শুকান।",
+        "জমি ও আইল আগাছামুক্ত রাখুন; এই জমির ধান বীজ হিসেবে রাখবেন না।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Give balanced fertiliser and make sure the field has enough potash, because this disease gets worse when potash is short.",
+        "Alternately irrigate and dry the field.",
+        "Keep the field and bunds weed-free, and do not keep seed from this field.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Narrow_brown_spot.htm"
+    },
+    "rice__sheath_blight": {
+      "name_bn": "ধানের খোলপোড়া রোগ",
+      "name_en": "Sheath blight",
+      "what_bn": "এটি ছত্রাকজনিত রোগ; গাছের নিচের দিকে, পানির কাছাকাছি পাতার খোলে ধূসর-সবুজ, ভেজা ভেজা ডিম্বাকার দাগ পড়ে, যার কিনারা সরু বাদামি রেখায় ঘেরা, পরে দাগ পাতায়ও ছড়ায়।",
+      "what_en": "A fungal disease that makes oval, grey-green, water-soaked patches with thin brown borders on the leaf sheath near the water line, which later spread to the leaves.",
+      "steps_bn": [
+        "জমির পানি সরিয়ে কয়েক দিন শুকিয়ে আবার পানি দিন (পর্যায়ক্রমে শুকানো ও ভেজানো)।",
+        "বাড়তি ইউরিয়া দেবেন না। দুই কিস্তিতে পটাশ সার দিলে উপকার হয়; পরিমাণ উপ-সহকারী কৃষি কর্মকর্তার কাছে জেনে নিন।",
+        "ধান কাটার পর আক্রান্ত নাড়া ও খড়কুটা নষ্ট করুন; পরের বার একটু দূরে দূরে চারা লাগান।",
+        "আরও পরামর্শের জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Drain the field and let it dry for a few days, then re-flood it (alternate wetting and drying).",
+        "Do not give extra urea. Potash given in two splits helps; ask your Sub-Assistant Agriculture Officer how much to use.",
+        "After harvest, destroy infected stubble and straw. Next season, plant seedlings a bit wider apart.",
+        "For further advice, contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_10/Factsheet3%20-%20Kholpora%20rog.pdf"
+    },
+    "rice__stripes": {
+      "name_bn": "ধানের পাতায় ডোরা দাগ",
+      "name_en": "Leaf stripes (cause uncertain)",
+      "what_bn": "পাতায় লম্বালম্বি হলদে বা সাদা ডোরা দাগ কয়েকটি কারণে হতে পারে — মাটিতে দস্তা বা অন্য খাদ্য উপাদানের অভাব, ব্যাকটেরিয়াজনিত লালচে রেখা রোগ, অথবা পাতাফড়িং বা গাছফড়িং-বাহিত কোনো ভাইরাস; শুধু ছবি দেখে আসল কারণ নিশ্চিত বলা যায় না।",
+      "what_en": "Yellow or white stripes along the leaf can come from a shortage of zinc or another nutrient in the soil, from bacterial leaf streak, or from a virus spread by leafhoppers or planthoppers, and a photo alone cannot tell which.",
+      "steps_bn": [
+        "শুধু অল্প কয়েকটি গাছ ডোরা দাগসহ খুব খাটো হয়ে গেলে সেগুলো তুলে নষ্ট করুন; পুরো জমি বা বড় অংশ জুড়ে দাগ হলে গাছ তুলবেন না — এটা খাদ্য উপাদানের অভাব হতে পারে।",
+        "জমি ও আইলের আগাছা, পুরনো নাড়া ও মুড়িধান পরিষ্কার করুন — এগুলোতে রোগজীবাণু ও ক্ষতিকর পোকা আশ্রয় নেয়; বাড়তি ইউরিয়া না দিয়ে সুষম সার (ইউরিয়া, টিএসপি, পটাশ) দিন।",
+        "কোনো স্প্রে করার আগে আসল কারণ নিশ্চিত হতে আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "If only a few scattered plants are striped and badly stunted, pull them out and destroy them. If stripes cover the whole field or large patches, do not pull plants; it may be a nutrient shortage.",
+        "Clear weeds, old stubble and ratoon rice from the field and bunds, because they shelter disease germs and harmful insects. Give balanced fertiliser (urea, TSP and potash) instead of extra urea.",
+        "Before any spraying, confirm the real cause: contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm"
+    },
+    "rice__tungro": {
+      "name_bn": "ধানের টুংরো রোগ",
+      "name_en": "Tungro",
+      "what_bn": "এটি ভাইরাসজনিত রোগ, সবুজ পাতাফড়িং এটি ছড়ায়; পাতা হলুদ থেকে কমলা রঙের হয়ে যায় এবং গাছ খাটো হয়ে কুশি কমে যায়।",
+      "what_en": "A virus disease spread by the green leafhopper that turns leaves yellow to orange and leaves plants short with few tillers.",
+      "steps_bn": [
+        "হলুদ ও খাটো হয়ে যাওয়া গাছ দেখামাত্র তুলে মাটিতে পুঁতে ফেলুন।",
+        "জমি ও আইলের আড়ালি ঘাস, মুড়িধান ও অন্যান্য আগাছা পরিষ্কার করুন; হাতজাল টেনে বা রাতে আলোর ফাঁদ দিয়ে সবুজ পাতাফড়িং আছে কি না দেখুন।",
+        "টুংরো আক্রান্ত জমির পাশে বীজতলা করবেন না।",
+        "পাতাফড়িং এক জমি থেকে আরেক জমিতে যায়, তাই পাশের জমির কৃষকদের সাথে মিলে ব্যবস্থা নিন। এ জন্য আপনার এলাকার উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out yellow, stunted plants as soon as you see them and bury them in the soil.",
+        "Clear arali grass (a grassy weed), ratoon rice (rice that regrows after harvest) and other weeds in and around the field. Sweep with a hand net, or use a light trap at night, to check for green leafhoppers.",
+        "Do not make a seedbed next to a tungro-affected field.",
+        "Leafhoppers move between fields, so act together with your neighbours. Contact your local Sub-Assistant Agriculture Officer (SAAO) or call the Krishi Call Centre at 16123."
+      ],
+      "source": "http://knowledgebank-brri.org/Rice_Production_Training_Manual/Day_3/Module_10/Factsheet9%20-%20Tungro%20rog.pdf"
+    },
+    "tomato__downy_mildew": {
+      "name_bn": "টমেটোর ডাউনি মিলডিউ বা নাবী ধ্বসা রোগ",
+      "name_en": "Tomato downy mildew (late blight type)",
+      "what_bn": "ছত্রাকের মতো এক ধরনের জীবাণুর কারণে হয়; টমেটোতে এটি সাধারণত নাবী ধ্বসা রোগ। পাতায় ফ্যাকাশে পানিভেজা দাগ পড়ে, যা পরে বাদামি থেকে কালো হয়। কুয়াশা ও স্যাঁতসেঁতে আবহাওয়ায় পাতার নিচে সাদাটে তুলার মতো আস্তরণ দেখা যায়।",
+      "what_en": "Caused by a fungus-like water mould; pale, water-soaked patches on the leaf turn brown to black, with whitish downy growth underneath in foggy, damp weather (in tomato this is usually late blight).",
+      "steps_bn": [
+        "আক্রান্ত পাতা ও বেশি আক্রান্ত গাছ সাথে সাথে তুলে নষ্ট করুন — এই রোগ কয়েক দিনের মধ্যে পুরো ক্ষেতে ছড়াতে পারে।",
+        "শুধু সকালে সেচ দিন, শেষ বিকালে নয়। জমিতে পানি জমতে দেবেন না এবং অতিরিক্ত ইউরিয়া (নাইট্রোজেন) সার দেবেন না।",
+        "এই রোগ খুব দ্রুত ছড়ায়, তাই আজই স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন, যাতে রোগ নিশ্চিত হয় ও সঠিক দমন পরামর্শ পান।"
+      ],
+      "steps_en": [
+        "Remove and destroy infected leaves and badly hit plants at once, because this disease can spread through the whole field within days.",
+        "Water only in the morning, never in the late afternoon. Do not let water stand in the field, and do not use too much urea (nitrogen) fertiliser.",
+        "This disease spreads very fast, so today contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm it and get the right treatment advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/815"
+    },
+    "tomato__mosaic_virus": {
+      "name_bn": "টমেটোর মোজাইক ভাইরাস রোগ",
+      "name_en": "Tomato mosaic virus",
+      "what_bn": "ভাইরাসজনিত রোগ; পাতায় হালকা ও গাঢ় সবুজ বা হলুদ ছোপ ছোপ (মোজাইক) দেখা যায়, পাতা কুঁকড়ে বা সরু হয়ে যায় এবং গাছ খাটো থাকে।",
+      "what_en": "Caused by a virus; leaves show light- and dark-green or yellow mottling (mosaic), may curl or become narrow, and the plant stays stunted.",
+      "steps_bn": [
+        "আক্রান্ত গাছ তুলে নষ্ট করে ফেলুন; ভাইরাস রোগ কোনো স্প্রে দিয়ে সারে না।",
+        "সুস্থ গাছ ধরার আগে সাবান দিয়ে হাত ও যন্ত্রপাতি ধুয়ে নিন, কাজের সময় বিড়ি-সিগারেট বা তামাক ব্যবহার করবেন না এবং জমি আগাছামুক্ত রাখুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out infected plants and destroy them; a virus cannot be cured by spraying.",
+        "Wash hands and tools with soap before touching healthy plants, do not use tobacco while working, and keep the field weed-free.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/"
+    },
+    "tomato__spot": {
+      "name_bn": "টমেটোর পাতার দাগ রোগ",
+      "name_en": "Tomato leaf spot",
+      "what_bn": "সাধারণত ছত্রাক বা ব্যাকটেরিয়ার কারণে হয়; পাতায় বাদামি থেকে কালো দাগ বা ছোপ পড়ে, চারপাশে প্রায়ই হলুদ আভা থাকে, অনেক সময় নিচের পাতার কিনারা ও আগা থেকে শুরু হয় এবং পরে দাগগুলো বড় হয়ে মিশে যায়।",
+      "what_en": "Usually caused by a fungus (such as early blight or Septoria) or bacteria; brown to black spots or patches, often with a yellow edge, appear on the leaves, often starting at the edges and tips of lower leaves, and later grow and join together.",
+      "steps_bn": [
+        "দাগওয়ালা নিচের পাতাগুলো ছিঁড়ে জমি থেকে দূরে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন।",
+        "সকালে গাছের গোড়ায় সেচ দিন, পাতা ভেজাবেন না। গাছের মাঝে ফাঁক রাখুন, যাতে বাতাস চলাচল করে।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off the spotted lower leaves and bury or burn them away from the field.",
+        "Water at the base of the plant in the morning without wetting the leaves, and keep space between plants so air can move.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html"
+    },
+    "tomato__white_spot": {
+      "name_bn": "টমেটোর পাতায় সাদা দাগ ও ছিদ্র (পোকা বা আঘাতজনিত)",
+      "name_en": "Tomato white spots and holes (insect or physical damage)",
+      "what_bn": "সাধারণত এটি রোগ নয় — পাতা সুড়ঙ্গকারী পোকার কীড়া পাতার ভেতরটা খেয়ে ফেললে, অন্য পোকা পাতা খেলে বা আঘাত লাগলে পাতায় অনিয়মিত সাদা বা স্বচ্ছ ছোপ ও ছিদ্র হয়। পাতার ওপর সাদা পাউডারের মতো আস্তরণ থাকলে সেটি পাউডারি মিলডিউ রোগ।",
+      "what_en": "Usually not a disease: leaf-miner grubs eating inside the leaf, other insects chewing it, or physical injury leave irregular white or see-through patches and holes. A white powder on the leaf surface would instead be powdery mildew.",
+      "steps_bn": [
+        "পাতার দুই দিক ভালো করে দেখুন; সুড়ঙ্গ বা পোকাওয়ালা পাতা ছিঁড়ে মাটিতে পুঁতে নষ্ট করুন এবং পোকা হাত দিয়ে ধরে মেরে ফেলুন।",
+        "গাছ ঘন করে লাগাবেন না এবং জমি আগাছামুক্ত রাখুন, যাতে বাতাস চলাচল করে ও পাতা তাড়াতাড়ি শুকায়।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Check both sides of the leaves; pick off leaves with tunnels or insects and bury them, and hand-pick and kill any insects you find.",
+        "Do not crowd the plants and keep the field weed-free so air moves and leaves dry quickly.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_2.html"
+    },
+    "zucchini__angular_leaf_spot": {
+      "name_bn": "জুকিনির কৌণিক পাতা দাগ (অ্যাঙ্গুলার লিফ স্পট) রোগ",
+      "name_en": "Zucchini angular leaf spot",
+      "what_bn": "ব্যাকটেরিয়াজনিত রোগ; পাতার শিরার মাঝে কোণাকার পানিভেজা দাগ পড়ে, পরে ধূসর বা হালকা বাদামি হয় এবং দাগের মাঝখান ঝরে পাতা ছেঁড়া ছেঁড়া দেখায়।",
+      "what_en": "Caused by bacteria; water-soaked spots bounded by the leaf veins look angular, turn grey or tan, and the dead centres may fall out, giving a torn look.",
+      "steps_bn": [
+        "আক্রান্ত পাতা ও জমিতে পড়ে থাকা গাছের অংশ সরিয়ে নষ্ট করুন।",
+        "পাতার ওপর পানি না দিয়ে গোড়ায় সেচ দিন এবং পাতা ভেজা থাকলে গাছে হাত দেবেন না। পরের মৌসুমে রোগমুক্ত বীজ ব্যবহার করুন ও অন্য জমিতে চাষ করুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove affected leaves and plant debris from the field and destroy them.",
+        "Water at the base instead of over the leaves, do not handle plants while wet, and next season use clean seed and a different field.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://ext.vt.edu/content/dam/pubs_ext_vt_edu/450/450-700/SPES-528.pdf"
+    },
+    "zucchini__anthracnose": {
+      "name_bn": "জুকিনির এনথ্রাকনোজ রোগ",
+      "name_en": "Zucchini anthracnose",
+      "what_bn": "ছত্রাকজনিত রোগ; পাতায় গোল হালকা বাদামি থেকে বাদামি দাগ পড়ে, দাগ শুকিয়ে ফেটে বা ঝরে যেতে পারে এবং গরম ও ভেজা আবহাওয়ায় দ্রুত ছড়ায়।",
+      "what_en": "Caused by a fungus; round tan to brown spots appear on the leaves. The spots dry out and may crack or fall out of the leaf. The disease spreads fast in warm, wet weather.",
+      "steps_bn": [
+        "আক্রান্ত পাতা ও আগের ফসলের অবশিষ্টাংশ জমি থেকে সরিয়ে নষ্ট করুন।",
+        "পাতার ওপর পানি ছিটাবেন না, বেডের ওপরটা শুকনো রাখুন এবং পরের মৌসুমে রোগমুক্ত বীজ ব্যবহার করুন ও অন্য জমিতে চাষ করুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove affected leaves and old crop debris from the field and destroy them.",
+        "Avoid sprinkling water over the leaves, keep the bed tops dry, and next season use clean seed and a different field.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://apps.lucidcentral.org/ppp/text/web_full/entities/cucurbit_anthracnose_200.htm"
+    },
+    "zucchini__downy_mildew": {
+      "name_bn": "জুকিনির ডাউনি মিলডিউ রোগ",
+      "name_en": "Zucchini downy mildew",
+      "what_bn": "ছত্রাকের মতো এক ধরনের জীবাণুর কারণে হয়; পুরনো পাতায় শিরার মাঝে ফ্যাকাশে সবুজ থেকে হলুদ কোণাকার দাগ পড়ে এবং ভেজা আবহাওয়ায় পাতার নিচে ধূসর-বেগুনি তুলার মতো আস্তরণ দেখা যায়।",
+      "what_en": "Caused by a fungus-like water mould; pale-green to yellow angular patches form between the veins, starting on older leaves, with grey-purple downy growth underneath in damp weather.",
+      "steps_bn": [
+        "আক্রান্ত পুরনো পাতা ছিঁড়ে জমি থেকে দূরে নষ্ট করুন।",
+        "পাতার ওপর পানি দেবেন না, জমিতে পানি জমতে দেবেন না এবং গাছের মাঝে বাতাস চলাচলের জায়গা রাখুন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pick off affected older leaves and destroy them away from the field.",
+        "Do not water over the leaves, do not let water stand in the field, and keep space between plants for air flow.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/cucurbits/downy-mildew/"
+    },
+    "zucchini__dry_leaf": {
+      "name_bn": "জুকিনির পাতা শুকিয়ে যাওয়া",
+      "name_en": "Zucchini dry leaf",
+      "what_bn": "এটি প্রায়ই ছোঁয়াচে রোগ নয়। পানির অভাব, অতিরিক্ত গরম, গরম বাতাস, শিকড়ের ক্ষতি, অতিরিক্ত সার বা পাতা পুরনো হলে পাতা কিনারা থেকে বাদামি হয়ে শুকিয়ে যায়। তবে কোনো রোগ বেশি ছড়ালেও পাতা শুকাতে পারে।",
+      "what_en": "Often not an infectious disease: leaves dry and turn brown from the edges due to water shortage, heat, hot wind, root damage, too much fertiliser or old age, though a severe disease can also dry leaves.",
+      "steps_bn": [
+        "নিয়মিত গাছের গোড়ায় ভালোভাবে সেচ দিন, কিন্তু পানি জমতে দেবেন না। মাটির রস ধরে রাখতে গোড়ায় খড় বিছিয়ে দিন।",
+        "শুকনো পাতা সরিয়ে ফেলুন। গাছের গোড়ার খুব কাছে রাসায়নিক সার দেবেন না এবং সার যেন পাতায় না লাগে।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Water deeply at the base regularly without waterlogging, and spread straw mulch to keep the soil moist.",
+        "Remove the dried leaves, and do not put chemical fertiliser too close to the stem or on the leaves.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "https://extension.colostate.edu/resource/leaf-scorch/"
+    },
+    "zucchini__insect_damage": {
+      "name_bn": "জুকিনির পাতায় পোকার ক্ষতি",
+      "name_en": "Zucchini insect damage",
+      "what_bn": "এটি রোগ নয় — কুমড়ার লাল পোকা (রেড পাম্পকিন বিটল), শুঁয়োপোকা বা পাতা সুড়ঙ্গকারী পোকা পাতা ফুটো করে, কিনারা খেয়ে ফেলে বা পাতার ভেতরে আঁকাবাঁকা সুড়ঙ্গ করে।",
+      "what_en": "Not a disease: insects such as the red pumpkin beetle, caterpillars or leaf miners chew holes, eat the leaf edges, or make winding tunnels inside the leaf.",
+      "steps_bn": [
+        "সকালে পোকা হাত দিয়ে ধরে মেরে ফেলুন এবং সুড়ঙ্গওয়ালা পাতা ছিঁড়ে নষ্ট করুন।",
+        "চারা গজানোর পর প্রথম ২০ থেকে ২৫ দিন মশারির জাল দিয়ে চারা ঢেকে রাখুন এবং ক্ষেত ও আশপাশ আগাছামুক্ত রাখুন।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Hand-pick and kill the insects in the morning, and remove leaves with tunnels.",
+        "Cover young seedlings with mosquito net for the first 20-25 days, and keep the field and its edges free of weeds.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "https://www.krishokerjanala.gov.bd/crop-problem/741"
+    },
+    "zucchini__iron_chlorosis_damage": {
+      "name_bn": "জুকিনির আয়রন (লৌহ) ঘাটতিজনিত পাতা হলুদ হওয়া",
+      "name_en": "Zucchini iron chlorosis (iron deficiency)",
+      "what_bn": "এটি রোগ নয়, পুষ্টির অভাবজনিত সমস্যা — ওপরের কচি পাতার শিরার মাঝের অংশ হলুদ হয় কিন্তু শিরা সবুজ থাকে; সাধারণত মাটি ক্ষারীয় (পিএইচ বেশি) হলে বা পানি জমে থাকলে গাছ মাটি থেকে আয়রন নিতে পারে না।",
+      "what_en": "Not a disease but a nutrient problem: young upper leaves turn yellow between the veins while the veins stay green, usually because alkaline (high-pH) or waterlogged soil stops the plant taking up iron.",
+      "steps_bn": [
+        "এই সমস্যার জন্য বাড়তি কোনো সার দেওয়ার আগে উপজেলা কৃষি অফিস বা মৃত্তিকা সম্পদ উন্নয়ন ইনস্টিটিউটের মাধ্যমে মাটি পরীক্ষা (পিএইচ ও পুষ্টি) করান।",
+        "মাটিতে ভালোভাবে পচানো গোবর বা কম্পোস্ট মেশান, নালা খোলা রাখুন যাতে পানি না জমে, এবং বেডে চুন বা ছাই দেবেন না।",
+        "সমস্যা নিশ্চিত হতে ও সঠিক পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Before adding any extra fertiliser for this problem, get the soil tested (pH and nutrients) through the Upazila agriculture office or the Soil Resource Development Institute (SRDI).",
+        "Mix well-rotted cow dung or compost into the soil, keep drains open so water does not stand, and do not add lime or ash to the bed.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the cause and get the right advice."
+      ],
+      "source": "https://extension.umd.edu/resource/nutrient-deficiency-vegetable-plants"
+    },
+    "zucchini__xanthomonas_leaf_spot": {
+      "name_bn": "জুকিনির জ্যান্থোমোনাস (ব্যাকটেরিয়াজনিত) পাতার দাগ রোগ",
+      "name_en": "Zucchini Xanthomonas leaf spot (bacterial spot)",
+      "what_bn": "জ্যান্থোমোনাস নামের ব্যাকটেরিয়া দিয়ে হয়; পাতায় ছোট পানিভেজা দাগ পড়ে যা পরে গাঢ় বাদামি থেকে কালো হয়, চারপাশে প্রায়ই হলুদ আভা থাকে এবং দাগ মিলে পাতা বিকৃত হয়ে যায়।",
+      "what_en": "Caused by Xanthomonas bacteria; small water-soaked spots turn dark brown to black, often with a yellow border, and can merge and distort the leaf.",
+      "steps_bn": [
+        "শুরুতেই আক্রান্ত গাছ বা পাতা তুলে নষ্ট করুন এবং ফসল তোলার পর গাছের অবশিষ্টাংশ ধ্বংস করুন।",
+        "গোড়ায় সেচ দিন এবং পাতা ভেজা থাকলে ক্ষেতে কাজ করবেন না। আক্রান্ত ফল থেকে বীজ রাখবেন না। এই জমিতে অন্তত ৩ বছর কুমড়া জাতীয় ফসল চাষ করবেন না।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Remove affected plants or leaves early, and destroy crop debris after harvest.",
+        "Water at the base, stay out of the field while leaves are wet, never save seed from infected fruit, and keep gourd-family crops off that land for at least 3 years.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://blogs.cornell.edu/livegpath/gallery/cucurbits/bacterial-leaf-spot-on-cucurbits/"
+    },
+    "zucchini__yellow_mosaic_virus": {
+      "name_bn": "জুকিনির হলুদ মোজাইক ভাইরাস রোগ",
+      "name_en": "Zucchini yellow mosaic virus",
+      "what_bn": "জাব পোকা দিয়ে ছড়ানো ভাইরাসজনিত রোগ; পাতায় হলুদ-সবুজ ছোপ ছোপ মোজাইক ও ফোসকার মতো উঁচু অংশ দেখা যায়, পাতা সরু ও বিকৃত হয় এবং গাছ খাটো থাকে।",
+      "what_en": "Caused by a virus spread by aphids; leaves show yellow-green mosaic and blisters, become narrow and deformed, and the plant stays stunted.",
+      "steps_bn": [
+        "আক্রান্ত গাছ শুরুতেই তুলে নষ্ট করুন এবং জমি আগাছামুক্ত রাখুন; ভাইরাস রোগ স্প্রে দিয়ে সারে না।",
+        "জাব পোকা দূরে রাখতে চারা অবস্থায় গাছ নেট দিয়ে ঢেকে রাখুন অথবা বেডে রুপালি রঙের চকচকে পলিথিন (মালচ) বিছিয়ে দিন।",
+        "রোগ নিশ্চিত হতে ও সঠিক দমন পরামর্শের জন্য স্থানীয় উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out and destroy infected plants early and keep the field weed-free; a virus cannot be cured by spraying.",
+        "Keep aphids away by covering young plants with net or laying silver reflective mulch on the beds.",
+        "Contact your local Sub-Assistant Agriculture Officer (SAAO) or call Krishi Call Centre 16123 to confirm the problem and get the right treatment advice."
+      ],
+      "source": "https://ipm.ucanr.edu/agriculture/cucurbits/potyviruses/"
+    }
+  },
+  "content_status": "Written from the cited extension pages, then checked by independent agronomy, source and Bangla reviews (research/advice_review). No pesticide names or doses by design. Have an agriculture officer review it before release to farmers."
+}

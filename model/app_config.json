@@ -1,0 +1,26 @@
+{
+  "model": "DEMO - thesis Baseline_Lab (EfficientNet-B3), trained on paper/lab photos",
+  "model_version": "demo-baseline-lab",
+  "input": {
+    "shape": [
+      1,
+      300,
+      300,
+      3
+    ]
+  },
+  "reject_below_confidence": 0.7,
+  "min_crop_mass": 0.3,
+  "temperature": 1.0,
+  "warning": "Not field-valid. Replace with app_bundle.zip from notebook Section 28.",
+  "metrics": {
+    "external": {
+      "accuracy": 0.0,
+      "note": "Dhan-Shomadhan field rice, right disease"
+    },
+    "field_test": {
+      "accuracy": 18.73767258382643,
+      "note": "SAR-CLD-2024 field cotton, right disease"
+    }
+  }
+}

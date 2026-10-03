@@ -1,0 +1,226 @@
+"""Leaf Doctor server: the phone sends a photo, the server answers in Bangla.
+
+  GET  /health                               liveness + model version
+  GET  /api/v1/meta                          crops, classes, threshold, measured metrics
+  POST /api/v1/diagnose                      1-3 photos (+ crop, district) -> verdict, top-3, advice, case id
+  POST /api/v1/cases/{id}/feedback           farmer says whether the answer was right (the data loop)
+  DELETE /api/v1/cases/{id}                  farmer deletes the case and its photo
+  GET  /api/v1/cases/{id}                    the case (needs its access key)
+  POST /api/v1/cases/{id}/messages           farmer asks an expert about this case
+  GET  /api/v1/cases/{id}/messages           the thread
+  GET  /api/v1/expert/cases                  open questions            (expert token)
+  POST /api/v1/expert/cases/{id}/reply       expert answers            (expert token)
+
+Configuration (environment variables):
+  MODEL_DIR     folder with app_model.onnx, labels.txt, app_config.json (notebook 28.6)
+  DATA_DIR      where the SQLite file and case thumbnails go
+  EXPERT_TOKEN  shared secret for the expert endpoints; expert endpoints are off if unset
+  MAX_UPLOAD_MB upload limit, default 6
+"""
+from __future__ import annotations
+
+import hmac
+import io
+import os
+import time
+from collections import defaultdict, deque
+from pathlib import Path
+
+from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Request, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from PIL import Image, ImageOps, UnidentifiedImageError
+from pydantic import BaseModel, Field
+
+from . import engine
+from .knowledge import Knowledge
+from .store import Store
+
+MODEL_DIR = os.environ.get('MODEL_DIR', str(Path(__file__).resolve().parents[1] / 'model'))
+DATA_DIR = Path(os.environ.get('DATA_DIR', str(Path(__file__).resolve().parents[1] / 'data')))
+EXPERT_TOKEN = os.environ.get('EXPERT_TOKEN', '')
+MAX_UPLOAD = int(float(os.environ.get('MAX_UPLOAD_MB', '6')) * 1024 * 1024)
+RATE_PER_MIN = int(os.environ.get('RATE_PER_MIN', '30'))
+
+app = FastAPI(title='Leaf Doctor', version='1.0')
+app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods=['GET', 'POST'], allow_headers=['*'])
+
+_bundle: engine.ModelBundle | None = None
+_store = Store(DATA_DIR / 'leafdoctor.sqlite3')
+_kb = Knowledge()
+_hits: dict[str, deque] = defaultdict(deque)
+
+
+def bundle() -> engine.ModelBundle:
+    global _bundle
+    if _bundle is None:
+        try:
+            _bundle = engine.load_bundle(MODEL_DIR)
+        except FileNotFoundError as e:
+            raise HTTPException(503, f'model not installed: {e.filename}')
+    return _bundle
+
+
+def rate_limit(request: Request):
+    # ponytail: in-memory per-IP window; move to Redis if this ever runs on more than one worker
+    ip = request.client.host if request.client else 'unknown'
+    q, now = _hits[ip], time.monotonic()
+    while q and now - q[0] > 60:
+        q.popleft()
+    if len(q) >= RATE_PER_MIN:
+        raise HTTPException(429, 'too many requests, try again in a minute')
+    q.append(now)
+
+
+def expert(authorization: str = Header(default='')):
+    if not EXPERT_TOKEN:
+        raise HTTPException(404, 'expert endpoints are disabled')
+    if not hmac.compare_digest(authorization.removeprefix('Bearer ').strip(), EXPERT_TOKEN):
+        raise HTTPException(401, 'bad expert token')
+
+
+def own_case(case_id: str, key: str) -> dict:
+    c = _store.case(case_id)
+    if not c or not hmac.compare_digest(c['access_key'], key or ''):
+        raise HTTPException(404, 'no such case')
+    return c
+
+
+@app.get('/expert', include_in_schema=False)
+def expert_desk():
+    # the page itself holds no data; every call it makes needs the expert token
+    return FileResponse(Path(__file__).parent / 'static' / 'expert.html')
+
+
+@app.get('/health')
+def health():
+    try:
+        b = bundle()
+        return {'status': 'ok', 'model_version': b.version, 'classes': len(b.labels)}
+    except HTTPException as e:
+        return {'status': 'no_model', 'detail': e.detail}
+
+
+@app.get('/api/v1/meta')
+def meta(lang: str = 'bn'):
+    b = bundle()
+    return {'model_version': b.version, 'input_size': b.size, 'reject_below': b.reject_below,
+            'crops': [{'id': c, 'name': _kb.crop_name(c, lang)} for c in b.crops],
+            'classes': [{'id': l, 'crop': engine.crop_of(l), 'name': _kb.name(l, lang),
+                         'healthy': engine.is_healthy(l)} for l in b.labels],
+            'metrics': b.metrics, 'helpline': _kb.helpline}
+
+
+@app.post('/api/v1/diagnose', dependencies=[Depends(rate_limit)])
+async def diagnose(image: list[UploadFile] = File(...), crop: str | None = Form(default=None),
+                   lang: str = Form(default='bn'), district: str | None = Form(default=None, max_length=40)):
+    if not 1 <= len(image) <= 3:
+        raise HTTPException(422, 'send 1 to 3 photos of the same plant')
+    blobs = []
+    for f in image:
+        data = await f.read(MAX_UPLOAD + 1)
+        if len(data) > MAX_UPLOAD:
+            raise HTTPException(413, f'photo larger than {MAX_UPLOAD // (1024 * 1024)} MB')
+        blobs.append(data)
+    b = bundle()
+    if crop and crop not in b.crops:
+        raise HTTPException(422, f'unknown crop {crop!r}; known: {b.crops}')
+    t0 = time.perf_counter()
+    try:
+        # several photos of one plant: average the probabilities (BRRI's app takes up to 5)
+        probs = sum(engine.run(b, d) for d in blobs) / len(blobs)
+    except (UnidentifiedImageError, OSError):
+        raise HTTPException(415, 'not an image the server can read')
+    result = engine.decide(b.labels, probs, b.reject_below, crop, b.min_crop_mass)
+    thumb = _save_thumb(blobs[0])
+    case = _store.new_case(crop, result['verdict'], result['top'], b.version, thumb, district,
+                           round((time.perf_counter() - t0) * 1000, 1))
+    for t in result['top']:
+        t['name'] = _kb.name(t['label'], lang)
+    top = result['top'][0]['label']
+    return {'case_id': case['id'], 'access_key': case['access_key'], 'verdict': result['verdict'],
+            'top': result['top'], 'crop_mass': result['crop_mass'],
+            'advice': _kb.advice(top, lang) if result['verdict'] == 'disease' else None,
+            'message': _kb.verdict_text(result['verdict'], lang, crop),
+            'helpline': _kb.helpline, 'model_version': b.version}
+
+
+def _save_thumb(data: bytes) -> str | None:
+    """Keep a small copy for the expert. Re-encoding drops EXIF, including any GPS position."""
+    try:
+        im = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert('RGB')
+        im.thumbnail((640, 640))
+        d = DATA_DIR / 'cases'
+        d.mkdir(parents=True, exist_ok=True)
+        p = d / f'{time.time_ns()}.jpg'
+        im.save(p, 'JPEG', quality=85)
+        return str(p)
+    except Exception:
+        return None
+
+
+class Question(BaseModel):
+    body: str = Field(min_length=1, max_length=1000)
+
+
+@app.get('/api/v1/cases/{case_id}')
+def get_case(case_id: str, x_case_key: str = Header(default='')):
+    c = own_case(case_id, x_case_key)
+    c.pop('access_key'); c.pop('image_path', None)
+    return c
+
+
+@app.post('/api/v1/cases/{case_id}/messages', dependencies=[Depends(rate_limit)])
+def ask(case_id: str, q: Question, x_case_key: str = Header(default='')):
+    own_case(case_id, x_case_key)
+    return _store.add_message(case_id, 'farmer', q.body.strip(), new_status='asked')
+
+
+class Feedback(BaseModel):
+    correct: bool
+    true_label: str | None = Field(default=None, max_length=80)
+
+
+@app.post('/api/v1/cases/{case_id}/feedback')
+def feedback(case_id: str, f: Feedback, x_case_key: str = Header(default='')):
+    own_case(case_id, x_case_key)
+    _store.set_feedback(case_id, f.correct, f.true_label)
+    return {'ok': True}
+
+
+@app.delete('/api/v1/cases/{case_id}')
+def delete_case(case_id: str, x_case_key: str = Header(default='')):
+    c = own_case(case_id, x_case_key)
+    if c.get('image_path') and os.path.exists(c['image_path']):
+        os.remove(c['image_path'])
+    _store.delete(case_id)
+    return {'deleted': case_id}
+
+
+@app.get('/api/v1/cases/{case_id}/messages')
+def thread(case_id: str, x_case_key: str = Header(default='')):
+    own_case(case_id, x_case_key)
+    return _store.messages(case_id)
+
+
+@app.get('/api/v1/expert/cases', dependencies=[Depends(expert)])
+def open_cases():
+    return [{**c, 'messages': _store.messages(c['id'])} for c in _store.open_cases()]
+
+
+@app.post('/api/v1/expert/cases/{case_id}/reply', dependencies=[Depends(expert)])
+def reply(case_id: str, q: Question):
+    if not _store.case(case_id):
+        raise HTTPException(404, 'no such case')
+    return _store.add_message(case_id, 'expert', q.body.strip(), new_status='answered')
+
+
+# The web build of the app (flutter build web) and the Android APK, served from this same address,
+# so one link gives anyone the app. Mounted last: every API route above wins over a file.
+WEB_DIR = Path(os.environ.get('WEB_DIR', str(Path(__file__).resolve().parents[1] / 'web')))
+if (WEB_DIR / 'index.html').exists():
+    import mimetypes
+    from fastapi.staticfiles import StaticFiles
+    mimetypes.add_type('application/vnd.android.package-archive', '.apk')
+    mimetypes.add_type('application/wasm', '.wasm')
+    app.mount('/', StaticFiles(directory=WEB_DIR, html=True), name='web')
