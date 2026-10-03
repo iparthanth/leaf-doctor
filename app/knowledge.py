@@ -29,6 +29,8 @@ class Knowledge:
 
     def name(self, label: str, lang: str) -> str:
         e = self._entry(label)
+        if not e and label.endswith('__healthy'):    # healthy has no advice entry, but needs a name
+            return 'সুস্থ পাতা' if lang == 'bn' else 'Healthy leaf'
         return e.get(f'name_{lang}') or e.get('name_en') or self._pretty(label)
 
     def crop_name(self, crop: str, lang: str) -> str:
