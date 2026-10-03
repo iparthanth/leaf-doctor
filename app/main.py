@@ -16,13 +16,17 @@ Configuration (environment variables):
   DATA_DIR      where the SQLite file and case thumbnails go
   EXPERT_TOKEN  shared secret for the expert endpoints; expert endpoints are off if unset
   MAX_UPLOAD_MB upload limit, default 6
+  KEEP_AWAKE_URL  this server's public address; it opens its own /health every 10 minutes so a free host
+                (Render sleeps after 15 idle minutes) never sleeps. Render sets RENDER_EXTERNAL_URL itself.
 """
 from __future__ import annotations
 
 import hmac
 import io
 import os
+import threading
 import time
+import urllib.request
 from collections import defaultdict, deque
 from pathlib import Path
 
@@ -49,6 +53,23 @@ _bundle: engine.ModelBundle | None = None
 _store = Store(DATA_DIR / 'leafdoctor.sqlite3')
 _kb = Knowledge()
 _hits: dict[str, deque] = defaultdict(deque)
+
+# Keep a free host awake: the request goes out to the public address and back in, so the host counts it as a
+# visitor. ponytail: cannot wake a server that is already asleep - add an outside monitor if that ever happens.
+KEEP_AWAKE_URL = (os.environ.get('KEEP_AWAKE_URL') or os.environ.get('RENDER_EXTERNAL_URL', '')).rstrip('/')
+
+
+def _keep_awake(url: str, every_s: int = 600):
+    while True:
+        time.sleep(every_s)
+        try:
+            urllib.request.urlopen(f'{url}/health', timeout=60).read()
+        except Exception:
+            pass   # a missed ping is retried next round
+
+
+if KEEP_AWAKE_URL:
+    threading.Thread(target=_keep_awake, args=(KEEP_AWAKE_URL,), name='keep-awake', daemon=True).start()
 
 
 def bundle() -> engine.ModelBundle:
