@@ -241,7 +241,24 @@ def reply(case_id: str, q: Question):
 WEB_DIR = Path(os.environ.get('WEB_DIR', str(Path(__file__).resolve().parents[1] / 'web')))
 if (WEB_DIR / 'index.html').exists():
     import mimetypes
+    from fastapi.responses import FileResponse
     from fastapi.staticfiles import StaticFiles
     mimetypes.add_type('application/vnd.android.package-archive', '.apk')
     mimetypes.add_type('application/wasm', '.wasm')
+
+    @app.get('/flutter_service_worker.js', include_in_schema=False)
+    def retire_service_worker():
+        # whatever ?v= an old page asks for: the worker that clears the old app out of the browser
+        return FileResponse(Path(__file__).parent / 'static' / 'flutter_service_worker.js',
+                            media_type='text/javascript', headers={'Cache-Control': 'no-cache'})
+
+    @app.middleware('http')
+    async def revalidate_web_files(request: Request, call_next):
+        # the app's file names never change between versions (main.dart.js, ...): make browsers ask every time;
+        # an unchanged file costs a 304 thanks to its ETag
+        response = await call_next(request)
+        if request.method == 'GET' and not request.url.path.startswith('/api/'):
+            response.headers.setdefault('Cache-Control', 'no-cache')
+        return response
+
     app.mount('/', StaticFiles(directory=WEB_DIR, html=True), name='web')
