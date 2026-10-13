@@ -1,0 +1,5 @@
+Crop pictures
+- rice, potato, maize, eggplant, tomato, chili, cucumber, mango, banana, lemon, malabar_spinach (leafy green),
+  bean (pea pod), moringa (herb), agrivision4 (basket): Noto Emoji by Google, https://github.com/googlefonts/noto-emoji
+  (2D/svg), Apache License 2.0 - https://www.apache.org/licenses/LICENSE-2.0
+- all others: drawn for this app by tools/make_crop_icons.py
