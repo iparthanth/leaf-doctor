@@ -22,6 +22,8 @@ bottle_gourd__mosaic_virus
 cauliflower__black_rot
 cauliflower__downy_mildew
 cauliflower__healthy
+cauliflower__insect_damage
+chili__anthracnose
 chili__bacterial_spot
 chili__cercospora_leaf_spot
 chili__healthy
@@ -89,6 +91,9 @@ maize__fall_armyworm
 maize__gray_leaf_spot
 maize__healthy
 maize__leaf_blight
+maize__pest_damage
+maize__rust
+maize__streak_virus
 malabar_spinach__anthracnose
 malabar_spinach__bacterial_spot
 malabar_spinach__downy_mildew
@@ -151,6 +156,7 @@ sugarcane__banded_chlorosis
 sugarcane__brown_spot
 sugarcane__grassy_shoot
 sugarcane__healthy
+sugarcane__pest_damage
 sugarcane__pokkah_boeng
 sugarcane__rust
 sugarcane__smut
@@ -159,10 +165,13 @@ sugarcane__yellow_leaf
 tomato__bacterial_spot
 tomato__downy_mildew
 tomato__healthy
+tomato__leaf_blight
 tomato__leaf_curl_virus
 tomato__mosaic_virus
+tomato__septoria_leaf_spot
 tomato__spot
 tomato__spotted_wilt
+tomato__verticillium_wilt
 tomato__white_spot
 zucchini__angular_leaf_spot
 zucchini__anthracnose

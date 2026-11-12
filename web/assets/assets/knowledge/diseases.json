@@ -1987,6 +1987,25 @@
       ],
       "review": "pending"
     },
+    "tomato__septoria_leaf_spot": {
+      "name_bn": "টমেটোর সেপ্টোরিয়া পাতা দাগ রোগ",
+      "name_en": "Tomato Septoria leaf spot",
+      "what_bn": "ছত্রাকজনিত রোগ। পাতায় অনেক ছোট গোল দাগ হয়; দাগের মাঝখান ধূসর বা ফ্যাকাশে, কিনারা কালচে, ভেতরে ছোট কালো বিন্দু। নিচের পাতা থেকে শুরু হয়, পাতা হলুদ হয়ে ঝরে পড়ে। গরম, ভেজা আবহাওয়ায় বাড়ে।",
+      "what_en": "A fungal disease. Many small round spots with a grey or pale centre, a dark edge and tiny black dots inside. It starts on the lower leaves, which turn yellow and drop. Worse in warm, wet weather.",
+      "steps_bn": [
+        "দাগওয়ালা নিচের পাতা তুলে মাটিতে পুঁতে ফেলুন বা পুড়িয়ে ফেলুন",
+        "পাতার ওপর দিয়ে নয়, গাছের গোড়ায় পানি দিন; গাছে খুঁটি দিন, যাতে পাতা মাটিতে না লাগে",
+        "ফসল তোলার পর গাছের অবশিষ্টাংশ জমি থেকে সরিয়ে ফেলুন",
+        "ওষুধ দিতে হলে কোন ওষুধ, কতটুকু দেবেন, তা উপ-সহকারী কৃষি কর্মকর্তার কাছ থেকে জেনে নিন। আন্দাজে স্প্রে করবেন না।"
+      ],
+      "steps_en": [
+        "Pick off the spotted lower leaves and bury or burn them",
+        "Water at the base of the plant, not over the leaves; stake the plants so leaves stay off the soil",
+        "Clear the crop remains from the field after harvest",
+        "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "review": "pending"
+    },
     "potato__late_blight": {
       "name_bn": "আলুর নাবি ধ্বসা রোগ (লেট ব্লাইট)",
       "name_en": "Potato late blight",
@@ -2113,6 +2132,25 @@
         "Clear the crop remains from the field after harvest",
         "Do not grow the same crop or its relatives on that land next season",
         "If a spray is needed, get the product and dose from your Sub-Assistant Agriculture Officer; do not guess"
+      ],
+      "review": "pending"
+    },
+    "maize__streak_virus": {
+      "name_bn": "ভুট্টার স্ট্রিক ভাইরাস রোগ",
+      "name_en": "Maize streak virus",
+      "what_bn": "পাতাফড়িং পোকাবাহিত ভাইরাস রোগ। কচি পাতায় শিরা বরাবর সরু, ভাঙা ভাঙা হলুদ-সাদা রেখা হয়; বেশি আক্রান্ত গাছ খাটো থাকে, মোচা ছোট হয় বা হয় না। ভাইরাস সারানোর ওষুধ নেই।",
+      "what_en": "A virus spread by leafhoppers. Narrow, broken yellow-white streaks along the veins of young leaves; badly infected plants stay short and set small cobs or none. No spray cures the virus.",
+      "steps_bn": [
+        "আক্রান্ত গাছ শুরুতেই তুলে মাটিতে পুঁতে ফেলুন, যাতে অন্য গাছে না ছড়ায়",
+        "জমি ও আইল ঘাসজাতীয় আগাছামুক্ত রাখুন; এসব আগাছায় পাতাফড়িং থাকে",
+        "পুরনো ভুট্টা খেতের পাশে দেরিতে বীজ বুনবেন না",
+        "দেরি না করে আজই উপ-সহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন অথবা কৃষি কল সেন্টারে ১৬১২৩ নম্বরে ফোন করুন।"
+      ],
+      "steps_en": [
+        "Pull out infected plants early and bury them, so it does not spread",
+        "Keep the field and its edges free of grassy weeds, where the leafhoppers live",
+        "Do not sow late next to an older maize field",
+        "Contact your Sub-Assistant Agriculture Officer today or call the Krishi Call Centre at 16123."
       ],
       "review": "pending"
     },

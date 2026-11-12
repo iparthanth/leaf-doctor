@@ -1,6 +1,6 @@
 {
   "model": "EfficientNet-B3, no added attention",
-  "model_version": "AppBD_B3_seed42-312b4febcd5be200",
+  "model_version": "AppBD_B3_seed42-6f6e9f5a703795d4",
   "input": {
     "shape": [
       1,
@@ -43,6 +43,8 @@
     "cauliflower__black_rot",
     "cauliflower__downy_mildew",
     "cauliflower__healthy",
+    "cauliflower__insect_damage",
+    "chili__anthracnose",
     "chili__bacterial_spot",
     "chili__cercospora_leaf_spot",
     "chili__healthy",
@@ -110,6 +112,9 @@
     "maize__gray_leaf_spot",
     "maize__healthy",
     "maize__leaf_blight",
+    "maize__pest_damage",
+    "maize__rust",
+    "maize__streak_virus",
     "malabar_spinach__anthracnose",
     "malabar_spinach__bacterial_spot",
     "malabar_spinach__downy_mildew",
@@ -172,6 +177,7 @@
     "sugarcane__brown_spot",
     "sugarcane__grassy_shoot",
     "sugarcane__healthy",
+    "sugarcane__pest_damage",
     "sugarcane__pokkah_boeng",
     "sugarcane__rust",
     "sugarcane__smut",
@@ -180,10 +186,13 @@
     "tomato__bacterial_spot",
     "tomato__downy_mildew",
     "tomato__healthy",
+    "tomato__leaf_blight",
     "tomato__leaf_curl_virus",
     "tomato__mosaic_virus",
+    "tomato__septoria_leaf_spot",
     "tomato__spot",
     "tomato__spotted_wilt",
+    "tomato__verticillium_wilt",
     "tomato__white_spot",
     "zucchini__angular_leaf_spot",
     "zucchini__anthracnose",
@@ -257,398 +266,624 @@
     "tomato__healthy",
     "zucchini__healthy"
   ],
-  "split_id": "312b4febcd5be200",
+  "split_id": "6f6e9f5a703795d4",
   "metrics": {
     "temperature": 0.6400000000000001,
-    "split_id": "312b4febcd5be200",
-    "n_classes": 175,
-    "ece_raw": 0.16685799126838188,
-    "ece_after_T": 0.026459199638577055,
+    "split_id": "6f6e9f5a703795d4",
+    "n_classes": 184,
+    "ece_raw": 0.19011791881462292,
+    "ece_after_T": 0.011323573079160506,
     "all_test": {
-      "n": 13069,
-      "accuracy": 90.10635855842068,
-      "macro_f1": 87.40293422505427,
-      "balanced_acc": 88.58531249979835,
-      "crop_picked_accuracy": 90.2823475399801,
-      "right_crop": 99.7551457647869,
-      "miss_rate": 2.018106374952848,
-      "false_alarm": 2.9614604462474645,
-      "answered_at_0.70": 90.07575177901906,
-      "accuracy_when_answered": 94.81821270812097
+      "n": 15227,
+      "accuracy": 89.74847310698102,
+      "macro_f1": 86.55130461860466,
+      "balanced_acc": 87.94235339362062,
+      "crop_picked_accuracy": 90.18191370591711,
+      "right_crop": 99.35640638339791,
+      "miss_rate": 1.774141283214517,
+      "false_alarm": 4.162330905306972,
+      "answered_at_0.70": 86.50423589676232,
+      "accuracy_when_answered": 95.54357728515032
     },
     "field_test": {
-      "n": 11308,
-      "accuracy": 92.12062256809338,
-      "macro_f1": 90.179370966231,
-      "balanced_acc": 94.07754965141505,
-      "crop_picked_accuracy": 92.16483905199858,
-      "right_crop": 99.93809692253272,
-      "miss_rate": 1.8896777717094484,
-      "false_alarm": 1.8578727357176035,
-      "answered_at_0.70": 92.0145030067209,
-      "accuracy_when_answered": 95.92503604036521
-    },
-    "external": {
-      "n": 337,
-      "accuracy": 11.572700296735905,
-      "macro_f1": 3.8966803834295107,
-      "balanced_acc": 11.356431619589516,
-      "crop_picked_accuracy": 18.694362017804153,
-      "right_crop": 70.02967359050444,
-      "miss_rate": 1.483679525222552,
-      "false_alarm": 0.0,
-      "answered_at_0.70": 40.94955489614243,
-      "accuracy_when_answered": 9.420289855072465
+      "n": 10806,
+      "accuracy": 93.06866555617249,
+      "macro_f1": 90.08994594631857,
+      "balanced_acc": 93.66929879529195,
+      "crop_picked_accuracy": 93.13344438275031,
+      "right_crop": 99.8796964649269,
+      "miss_rate": 1.5929816460810344,
+      "false_alarm": 2.2398506766215585,
+      "answered_at_0.70": 91.49546548213955,
+      "accuracy_when_answered": 96.9353696773541
     },
     "per_source": {
       "agrivision4": {
-        "n": 774,
-        "accuracy": 70.02583979328165,
-        "crop_picked": 72.3514211886305
+        "n": 804,
+        "accuracy": 68.90547263681593,
+        "crop_picked": 72.01492537313433
       },
       "banana_bd": {
         "n": 65,
-        "accuracy": 95.38461538461539,
-        "crop_picked": 95.38461538461539
-      },
-      "banglariceleaf": {
-        "n": 624,
-        "accuracy": 96.63461538461539,
-        "crop_picked": 96.63461538461539
+        "accuracy": 90.76923076923077,
+        "crop_picked": 92.3076923076923
       },
       "bdveg6": {
-        "n": 2092,
-        "accuracy": 99.09177820267686,
-        "crop_picked": 99.09177820267686
+        "n": 1925,
+        "accuracy": 99.27272727272727,
+        "crop_picked": 99.27272727272727
       },
       "bean_rangpur": {
-        "n": 451,
-        "accuracy": 100.0,
-        "crop_picked": 100.0
+        "n": 476,
+        "accuracy": 99.78991596638656,
+        "crop_picked": 99.78991596638656
+      },
+      "cauliflower_cut": {
+        "n": 386,
+        "accuracy": 85.75129533678756,
+        "crop_picked": 86.26943005181347
+      },
+      "ccmt": {
+        "n": 1008,
+        "accuracy": 83.53174603174604,
+        "crop_picked": 84.42460317460318
       },
       "chili_bd": {
-        "n": 259,
-        "accuracy": 98.84169884169884,
-        "crop_picked": 98.84169884169884
+        "n": 275,
+        "accuracy": 98.9090909090909,
+        "crop_picked": 98.9090909090909
+      },
+      "chili_paper": {
+        "n": 170,
+        "accuracy": 97.6470588235294,
+        "crop_picked": 98.23529411764706
       },
       "cotton_bd": {
-        "n": 210,
-        "accuracy": 98.09523809523809,
-        "crop_picked": 98.09523809523809
+        "n": 206,
+        "accuracy": 95.63106796116504,
+        "crop_picked": 95.63106796116504
       },
       "eggplant_bd": {
-        "n": 309,
-        "accuracy": 92.55663430420712,
-        "crop_picked": 92.55663430420712
+        "n": 316,
+        "accuracy": 94.62025316455697,
+        "crop_picked": 94.62025316455697
       },
       "fruit4": {
-        "n": 160,
-        "accuracy": 98.75,
-        "crop_picked": 98.75
+        "n": 171,
+        "accuracy": 98.83040935672514,
+        "crop_picked": 98.83040935672514
       },
       "gourds4": {
-        "n": 678,
-        "accuracy": 98.52507374631269,
-        "crop_picked": 98.52507374631269
+        "n": 695,
+        "accuracy": 97.98561151079137,
+        "crop_picked": 97.98561151079137
+      },
+      "guava_barisal": {
+        "n": 75,
+        "accuracy": 93.33333333333333,
+        "crop_picked": 93.33333333333333
       },
       "guava_bd": {
-        "n": 110,
-        "accuracy": 93.63636363636364,
-        "crop_picked": 94.54545454545455
+        "n": 109,
+        "accuracy": 89.90825688073394,
+        "crop_picked": 89.90825688073394
       },
       "jute": {
-        "n": 134,
-        "accuracy": 85.82089552238806,
-        "crop_picked": 85.82089552238806
+        "n": 135,
+        "accuracy": 89.62962962962962,
+        "crop_picked": 89.62962962962962
       },
       "lemon_bd": {
-        "n": 207,
-        "accuracy": 99.03381642512076,
-        "crop_picked": 99.03381642512076
+        "n": 206,
+        "accuracy": 99.51456310679612,
+        "crop_picked": 99.51456310679612
+      },
+      "lemon_bdll": {
+        "n": 234,
+        "accuracy": 74.35897435897436,
+        "crop_picked": 79.05982905982906
       },
       "litchi_bd": {
-        "n": 848,
-        "accuracy": 98.23113207547169,
-        "crop_picked": 98.23113207547169
+        "n": 1596,
+        "accuracy": 99.43609022556392,
+        "crop_picked": 99.43609022556392
       },
       "maize_bd": {
-        "n": 293,
-        "accuracy": 97.26962457337885,
-        "crop_picked": 97.26962457337885
+        "n": 288,
+        "accuracy": 93.75,
+        "crop_picked": 94.09722222222221
+      },
+      "maize_cloth": {
+        "n": 126,
+        "accuracy": 74.60317460317461,
+        "crop_picked": 74.60317460317461
       },
       "malabar": {
-        "n": 428,
-        "accuracy": 79.67289719626169,
-        "crop_picked": 79.90654205607477
+        "n": 390,
+        "accuracy": 74.87179487179488,
+        "crop_picked": 74.87179487179488
+      },
+      "malabar_paper": {
+        "n": 91,
+        "accuracy": 82.41758241758241,
+        "crop_picked": 82.41758241758241
       },
       "mango_mldid": {
-        "n": 448,
-        "accuracy": 97.76785714285714,
-        "crop_picked": 97.76785714285714
+        "n": 440,
+        "accuracy": 97.72727272727273,
+        "crop_picked": 97.72727272727273
       },
       "mango_supu": {
-        "n": 191,
-        "accuracy": 98.95287958115183,
-        "crop_picked": 98.95287958115183
+        "n": 205,
+        "accuracy": 98.53658536585365,
+        "crop_picked": 98.53658536585365
       },
       "moringa_bd": {
-        "n": 130,
-        "accuracy": 86.15384615384616,
-        "crop_picked": 86.15384615384616
+        "n": 420,
+        "accuracy": 88.80952380952381,
+        "crop_picked": 88.80952380952381
       },
       "paddydoctor": {
-        "n": 1577,
-        "accuracy": 74.25491439441979,
-        "crop_picked": 74.31832593532023
+        "n": 1132,
+        "accuracy": 77.12014134275618,
+        "crop_picked": 77.20848056537103
       },
       "potato_bari": {
-        "n": 16,
+        "n": 10,
         "accuracy": 100.0,
         "crop_picked": 100.0
       },
       "potato_java": {
-        "n": 457,
-        "accuracy": 89.93435448577681,
-        "crop_picked": 89.93435448577681
+        "n": 454,
+        "accuracy": 86.34361233480176,
+        "crop_picked": 86.34361233480176
       },
       "rice_bd": {
-        "n": 391,
-        "accuracy": 71.86700767263427,
-        "crop_picked": 71.86700767263427
+        "n": 411,
+        "accuracy": 72.50608272506082,
+        "crop_picked": 72.50608272506082
       },
       "riceleafbd": {
-        "n": 238,
-        "accuracy": 90.33613445378151,
-        "crop_picked": 91.17647058823529
+        "n": 215,
+        "accuracy": 89.30232558139535,
+        "crop_picked": 91.16279069767442
       },
       "riceyleaf": {
-        "n": 256,
-        "accuracy": 85.15625,
-        "crop_picked": 85.15625
+        "n": 252,
+        "accuracy": 83.73015873015873,
+        "crop_picked": 83.73015873015873
       },
       "sarcld": {
-        "n": 319,
-        "accuracy": 98.43260188087774,
-        "crop_picked": 98.43260188087774
+        "n": 323,
+        "accuracy": 97.52321981424149,
+        "crop_picked": 97.52321981424149
       },
       "snake_gourd": {
-        "n": 94,
-        "accuracy": 98.93617021276596,
-        "crop_picked": 98.93617021276596
+        "n": 91,
+        "accuracy": 97.8021978021978,
+        "crop_picked": 97.8021978021978
       },
       "sponge_gourd": {
-        "n": 427,
-        "accuracy": 78.22014051522248,
-        "crop_picked": 78.22014051522248
+        "n": 343,
+        "accuracy": 62.68221574344023,
+        "crop_picked": 62.68221574344023
+      },
+      "sponge_luffa": {
+        "n": 313,
+        "accuracy": 93.9297124600639,
+        "crop_picked": 97.44408945686901
       },
       "sugarcane": {
-        "n": 883,
-        "accuracy": 90.26047565118913,
-        "crop_picked": 90.26047565118913
+        "n": 595,
+        "accuracy": 93.27731092436974,
+        "crop_picked": 93.27731092436974
+      },
+      "sugarcane_mh": {
+        "n": 276,
+        "accuracy": 99.63768115942028,
+        "crop_picked": 99.63768115942028
       }
     },
     "per_class_recall": {
-      "banana__cordana_leaf_spot": 100.0,
+      "banana__cordana_leaf_spot": 88.23529411764706,
       "banana__healthy": 100.0,
-      "banana__pestalotiopsis_leaf_spot": 93.75,
+      "banana__pestalotiopsis_leaf_spot": 87.5,
       "banana__sigatoka": 86.66666666666667,
       "bean__angular_leaf_spot": 100.0,
-      "bean__anthracnose": 100.0,
+      "bean__anthracnose": 99.02912621359224,
       "bean__healthy": 100.0,
       "bean__mosaic_virus": 100.0,
       "bean__rust": 100.0,
-      "bitter_gourd__anthracnose": 96.82539682539682,
-      "bitter_gourd__downy_mildew": 98.75776397515527,
-      "bitter_gourd__fusarium_wilt": 82.08955223880598,
+      "bitter_gourd__anthracnose": 93.54838709677419,
+      "bitter_gourd__downy_mildew": 98.10126582278481,
+      "bitter_gourd__fusarium_wilt": 87.67123287671232,
       "bitter_gourd__healthy": 100.0,
-      "bitter_gourd__mosaic_virus": 91.46341463414635,
-      "bottle_gourd__alternaria_leaf_blight": 90.0,
-      "bottle_gourd__anthracnose": 87.91946308724832,
-      "bottle_gourd__downy_mildew": 92.22222222222223,
-      "bottle_gourd__early_alternaria_leaf_blight": 68.0,
-      "bottle_gourd__fungal_damage_leaf": 54.54545454545454,
-      "bottle_gourd__healthy": 98.4,
-      "bottle_gourd__mosaic_virus": 82.0,
-      "cauliflower__black_rot": 100.0,
+      "bitter_gourd__mosaic_virus": 96.29629629629629,
+      "bottle_gourd__alternaria_leaf_blight": 80.0,
+      "bottle_gourd__anthracnose": 86.33093525179856,
+      "bottle_gourd__downy_mildew": 95.0,
+      "bottle_gourd__early_alternaria_leaf_blight": 80.0,
+      "bottle_gourd__fungal_damage_leaf": 50.0,
+      "bottle_gourd__healthy": 95.41284403669725,
+      "bottle_gourd__mosaic_virus": 89.36170212765957,
+      "cauliflower__black_rot": 87.65957446808511,
       "cauliflower__downy_mildew": 100.0,
-      "cauliflower__healthy": 100.0,
-      "chili__bacterial_spot": 96.0,
-      "chili__cercospora_leaf_spot": 100.0,
-      "chili__healthy": 96.61016949152543,
+      "cauliflower__healthy": 89.2018779342723,
+      "cauliflower__insect_damage": 96.90721649484536,
+      "chili__anthracnose": 94.0,
+      "chili__bacterial_spot": 92.5925925925926,
+      "chili__cercospora_leaf_spot": 97.46835443037975,
+      "chili__healthy": 100.0,
       "chili__leaf_curl_virus": 100.0,
       "chili__nutrient_deficiency": 100.0,
       "chili__white_spot": 100.0,
-      "cotton__alternaria_leaf_spot": 88.46153846153845,
-      "cotton__bacterial_blight": 98.66666666666667,
-      "cotton__curl_virus": 98.48484848484848,
-      "cotton__fusarium_wilt": 100.0,
-      "cotton__healthy": 100.0,
+      "cotton__alternaria_leaf_spot": 100.0,
+      "cotton__bacterial_blight": 95.58823529411765,
+      "cotton__curl_virus": 95.3125,
+      "cotton__fusarium_wilt": 96.61016949152543,
+      "cotton__healthy": 98.79518072289156,
       "cotton__herbicide_damage": 100.0,
       "cotton__jassids": 100.0,
-      "cotton__leaf_reddening": 96.47058823529412,
+      "cotton__leaf_reddening": 95.55555555555556,
       "cotton__leaf_variegation": 100.0,
-      "cotton__verticillium_wilt": 97.82608695652173,
+      "cotton__verticillium_wilt": 91.11111111111111,
       "cucumber__anthracnose": 100.0,
       "cucumber__downy_mildew": 100.0,
       "cucumber__healthy": 100.0,
-      "eggplant__aphids": 90.625,
+      "eggplant__aphids": 100.0,
       "eggplant__begomovirus": 100.0,
-      "eggplant__cercospora_leaf_spot": 96.03174603174604,
-      "eggplant__flea_beetles": 82.14285714285714,
-      "eggplant__healthy": 98.21428571428571,
-      "eggplant__leaf_wilt": 92.3076923076923,
+      "eggplant__cercospora_leaf_spot": 98.48484848484848,
+      "eggplant__flea_beetles": 88.0,
+      "eggplant__healthy": 98.75,
+      "eggplant__leaf_wilt": 100.0,
       "eggplant__phytophthora_blight": 100.0,
-      "eggplant__powdery_mildew": 94.28571428571428,
-      "eggplant__tobacco_mosaic_virus": 100.0,
-      "eggplant__verticillium_wilt": 100.0,
-      "guava__algal_leaf_spot": 86.66666666666667,
-      "guava__healthy": 97.14285714285714,
-      "guava__insect_damage": 82.35294117647058,
+      "eggplant__powdery_mildew": 94.11764705882352,
+      "eggplant__tobacco_mosaic_virus": 91.66666666666666,
+      "eggplant__verticillium_wilt": 99.0909090909091,
+      "guava__algal_leaf_spot": 89.28571428571429,
+      "guava__healthy": 96.72131147540983,
+      "guava__insect_damage": 92.3076923076923,
       "guava__leaf_scorch": 100.0,
-      "guava__mealybug": 100.0,
-      "guava__red_rust": 91.66666666666666,
-      "guava__yellow_leaf": 100.0,
+      "guava__mealybug": 92.3076923076923,
+      "guava__red_rust": 85.71428571428571,
+      "guava__yellow_leaf": 85.0,
       "jackfruit__fungal_leaf_spot": 100.0,
       "jackfruit__healthy": 100.0,
-      "jackfruit__leaf_blight": 93.75,
-      "jackfruit__pest_damage": 93.75,
-      "jute__cercospora_leaf_spot": 80.85106382978722,
-      "jute__healthy": 97.5,
-      "jute__yellow_mosaic_virus": 80.85106382978722,
-      "lemon__anthracnose": 92.3076923076923,
-      "lemon__bacterial_blight": 100.0,
-      "lemon__canker": 100.0,
-      "lemon__dry_leaf": 100.0,
-      "lemon__healthy": 100.0,
-      "lemon__leaf_curl_virus": 94.73684210526315,
-      "lemon__nutrient_deficiency": 100.0,
+      "jackfruit__leaf_blight": 100.0,
+      "jackfruit__pest_damage": 90.0,
+      "jute__cercospora_leaf_spot": 87.5,
+      "jute__healthy": 100.0,
+      "jute__yellow_mosaic_virus": 83.33333333333334,
+      "lemon__anthracnose": 66.66666666666666,
+      "lemon__bacterial_blight": 88.88888888888889,
+      "lemon__canker": 84.93150684931507,
+      "lemon__dry_leaf": 81.35593220338984,
+      "lemon__healthy": 90.9090909090909,
+      "lemon__leaf_curl_virus": 100.0,
+      "lemon__nutrient_deficiency": 86.74698795180723,
       "lemon__sooty_mould": 100.0,
-      "lemon__spider_mites": 100.0,
-      "litchi__black_spot": 100.0,
+      "lemon__spider_mites": 97.05882352941177,
+      "litchi__black_spot": 99.35064935064936,
       "litchi__dry_leaf": 100.0,
       "litchi__fungal_stripe": 100.0,
       "litchi__healthy": 100.0,
       "litchi__insect_damage": 100.0,
-      "litchi__leaf_blight": 69.6969696969697,
-      "litchi__leaf_scorch": 96.45390070921985,
+      "litchi__leaf_blight": 100.0,
+      "litchi__leaf_scorch": 97.97297297297297,
       "litchi__pest_dry_leaf": 100.0,
-      "litchi__red_rust": 100.0,
+      "litchi__red_rust": 96.64429530201343,
       "litchi__white_spot": 100.0,
       "litchi__yellow_mosaic_virus": 100.0,
-      "maize__fall_armyworm": 97.5,
-      "maize__gray_leaf_spot": 100.0,
-      "maize__healthy": 100.0,
-      "maize__leaf_blight": 91.8918918918919,
-      "malabar_spinach__anthracnose": 80.0,
-      "malabar_spinach__bacterial_spot": 73.39449541284404,
-      "malabar_spinach__downy_mildew": 64.28571428571429,
-      "malabar_spinach__healthy": 90.0523560209424,
-      "malabar_spinach__pest_damage": 70.4225352112676,
-      "mango__anthracnose": 98.125,
+      "maize__fall_armyworm": 93.65079365079364,
+      "maize__gray_leaf_spot": 96.0,
+      "maize__healthy": 95.91836734693877,
+      "maize__leaf_blight": 86.11111111111111,
+      "maize__pest_damage": 99.3421052631579,
+      "maize__rust": 58.333333333333336,
+      "maize__streak_virus": 86.41304347826086,
+      "malabar_spinach__anthracnose": 78.26086956521739,
+      "malabar_spinach__bacterial_spot": 85.21739130434783,
+      "malabar_spinach__downy_mildew": 51.42857142857142,
+      "malabar_spinach__healthy": 84.48275862068965,
+      "malabar_spinach__pest_damage": 61.261261261261254,
+      "mango__anthracnose": 94.83870967741936,
       "mango__bacterial_canker": 100.0,
       "mango__die_back": 100.0,
-      "mango__gall_midge": 94.53125,
+      "mango__gall_midge": 95.96774193548387,
       "mango__healthy": 100.0,
-      "mango__powdery_mildew": 95.74468085106383,
-      "moringa__bacterial_leaf_spot": 70.27027027027027,
-      "moringa__cercospora_leaf_spot": 100.0,
-      "moringa__healthy": 97.05882352941177,
-      "moringa__yellow_leaf": 83.33333333333334,
+      "mango__powdery_mildew": 100.0,
+      "moringa__bacterial_leaf_spot": 82.8125,
+      "moringa__cercospora_leaf_spot": 90.58823529411765,
+      "moringa__healthy": 95.55555555555556,
+      "moringa__yellow_leaf": 88.88888888888889,
       "okra__cercospora_leaf_spot": 100.0,
       "okra__healthy": 100.0,
-      "papaya__bacterial_blight": 72.0,
-      "papaya__carica_insect_hole": 59.183673469387756,
-      "papaya__curled_yellow_spot": 79.16666666666666,
-      "papaya__healthy": 87.5,
-      "papaya__mosaic_virus": 83.33333333333334,
-      "papaya__other_disease": 82.92682926829268,
-      "papaya__yellow_necrotic_spots_holes": 85.71428571428571,
-      "potato__bacterial_disease": 94.11764705882352,
-      "potato__fungal_disease": 92.7927927927928,
-      "potato__healthy": 88.88888888888889,
-      "potato__late_blight": 83.01886792452831,
-      "potato__nematode": 100.0,
-      "potato__pest_damage": 84.61538461538461,
-      "potato__virus": 93.25842696629213,
-      "pumpkin__downy_mildew": 93.42105263157895,
+      "papaya__bacterial_blight": 86.95652173913044,
+      "papaya__carica_insect_hole": 55.319148936170215,
+      "papaya__curled_yellow_spot": 72.5,
+      "papaya__healthy": 77.77777777777779,
+      "papaya__mosaic_virus": 78.57142857142857,
+      "papaya__other_disease": 93.02325581395348,
+      "papaya__yellow_necrotic_spots_holes": 75.0,
+      "potato__bacterial_disease": 96.66666666666667,
+      "potato__fungal_disease": 85.45454545454545,
+      "potato__healthy": 96.55172413793103,
+      "potato__late_blight": 82.0,
+      "potato__nematode": 80.0,
+      "potato__pest_damage": 81.3953488372093,
+      "potato__virus": 83.14606741573034,
+      "pumpkin__downy_mildew": 91.13924050632912,
       "pumpkin__healthy": 100.0,
-      "rice__bacterial_leaf_blight": 79.76190476190477,
-      "rice__bacterial_leaf_streak": 99.50980392156863,
-      "rice__blast": 71.12211221122112,
-      "rice__brown_spot": 75.0,
-      "rice__dead_heart": 98.61751152073732,
-      "rice__downy_mildew": 85.21739130434783,
-      "rice__healthy": 93.97590361445783,
-      "rice__hispa": 60.47430830039525,
-      "rice__insect": 93.61702127659575,
-      "rice__leaf_scald": 63.44086021505376,
-      "rice__leaffolder": 83.33333333333334,
-      "rice__narrow_brown_spot": 86.66666666666667,
-      "rice__sheath_blight": 92.85714285714286,
-      "rice__stripes": 60.0,
-      "rice__tungro": 73.33333333333333,
-      "ridge_gourd__downy_mildew": 98.75,
+      "rice__bacterial_leaf_blight": 72.07792207792207,
+      "rice__bacterial_leaf_streak": 95.34883720930233,
+      "rice__blast": 61.80555555555556,
+      "rice__brown_spot": 79.35222672064778,
+      "rice__dead_heart": 97.40259740259741,
+      "rice__downy_mildew": 90.17857142857143,
+      "rice__healthy": 90.0990099009901,
+      "rice__hispa": 67.2514619883041,
+      "rice__insect": 95.34883720930233,
+      "rice__leaf_scald": 53.48837209302325,
+      "rice__leaffolder": 83.78378378378379,
+      "rice__narrow_brown_spot": 86.95652173913044,
+      "rice__sheath_blight": 95.0,
+      "rice__stripes": 64.1025641025641,
+      "rice__tungro": 77.03703703703704,
+      "ridge_gourd__downy_mildew": 100.0,
       "ridge_gourd__healthy": 100.0,
-      "snake_gourd__anthracnose": 100.0,
+      "snake_gourd__anthracnose": 92.5925925925926,
       "snake_gourd__healthy": 100.0,
-      "snake_gourd__yellowing": 96.66666666666667,
-      "sponge_gourd__bacterial_leaf_spot": 78.37837837837837,
-      "sponge_gourd__downy_mildew": 70.83333333333334,
-      "sponge_gourd__healthy": 96.15384615384616,
-      "sponge_gourd__insect_damage": 75.43859649122807,
-      "sponge_gourd__mosaic_virus": 78.31858407079646,
-      "sugarcane__banded_chlorosis": 88.42105263157895,
-      "sugarcane__brown_spot": 93.19727891156462,
+      "snake_gourd__yellowing": 100.0,
+      "sponge_gourd__bacterial_leaf_spot": 80.55555555555556,
+      "sponge_gourd__downy_mildew": 66.66666666666666,
+      "sponge_gourd__healthy": 90.9090909090909,
+      "sponge_gourd__insect_damage": 76.86567164179104,
+      "sponge_gourd__mosaic_virus": 77.66990291262135,
+      "sugarcane__banded_chlorosis": 90.56603773584906,
+      "sugarcane__brown_spot": 91.24087591240875,
       "sugarcane__grassy_shoot": 100.0,
-      "sugarcane__healthy": 100.0,
-      "sugarcane__pokkah_boeng": 92.6829268292683,
-      "sugarcane__rust": 95.0,
-      "sugarcane__smut": 74.57627118644068,
-      "sugarcane__viral_disease": 86.58536585365853,
-      "sugarcane__yellow_leaf": 85.36585365853658,
+      "sugarcane__healthy": 99.07407407407408,
+      "sugarcane__pest_damage": 98.18181818181819,
+      "sugarcane__pokkah_boeng": 97.77777777777777,
+      "sugarcane__rust": 100.0,
+      "sugarcane__smut": 100.0,
+      "sugarcane__viral_disease": 90.12345679012346,
+      "sugarcane__yellow_leaf": 93.92523364485982,
       "tomato__bacterial_spot": 100.0,
-      "tomato__downy_mildew": 50.0,
-      "tomato__healthy": 97.52066115702479,
+      "tomato__downy_mildew": 88.88888888888889,
+      "tomato__healthy": 96.44670050761421,
+      "tomato__leaf_blight": 63.33333333333333,
       "tomato__leaf_curl_virus": 100.0,
-      "tomato__mosaic_virus": 58.06451612903226,
-      "tomato__spot": 72.97297297297297,
+      "tomato__mosaic_virus": 62.96296296296296,
+      "tomato__septoria_leaf_spot": 76.35135135135135,
+      "tomato__spot": 91.30434782608695,
       "tomato__spotted_wilt": 100.0,
-      "tomato__white_spot": 50.0,
+      "tomato__verticillium_wilt": 69.16666666666667,
+      "tomato__white_spot": 75.0,
       "zucchini__angular_leaf_spot": 0.0,
-      "zucchini__anthracnose": 14.285714285714285,
-      "zucchini__downy_mildew": 9.090909090909092,
-      "zucchini__dry_leaf": 20.0,
-      "zucchini__healthy": 57.89473684210527,
-      "zucchini__insect_damage": 63.63636363636363,
-      "zucchini__iron_chlorosis_damage": 75.0,
-      "zucchini__xanthomonas_leaf_spot": 30.76923076923077,
-      "zucchini__yellow_mosaic_virus": 82.85714285714286
+      "zucchini__anthracnose": 31.818181818181817,
+      "zucchini__downy_mildew": 11.538461538461538,
+      "zucchini__dry_leaf": 56.25,
+      "zucchini__healthy": 56.25,
+      "zucchini__insect_damage": 57.14285714285714,
+      "zucchini__iron_chlorosis_damage": 33.33333333333333,
+      "zucchini__xanthomonas_leaf_spot": 38.88888888888889,
+      "zucchini__yellow_mosaic_virus": 50.0
     },
     "background_swap": {
-      "original": 75.81395348837209,
-      "swapped": 76.01328903654485
+      "original": 81.50635644039338,
+      "swapped": 82.46581914128089
     },
-    "flip_rotate_90": 9.0,
-    "flip_vertical_flip": 7.75,
-    "flip_sensor_noise": 7.5
+    "flip_rotate_90": 8.75,
+    "flip_vertical_flip": 7.249999999999999,
+    "flip_sensor_noise": 6.75,
+    "external": {
+      "n": 6120,
+      "accuracy": 37.33660130718954,
+      "macro_f1": 5.897576533783187,
+      "balanced_acc": 26.51394795834329,
+      "crop_picked_accuracy": 54.11764705882353,
+      "right_crop": 61.192810457516345,
+      "miss_rate": 1.6411997736276174,
+      "false_alarm": 4.761904761904762,
+      "answered_at_0.70": 48.18627450980392,
+      "accuracy_when_answered": 51.135978297728045
+    },
+    "unknown_disease": {
+      "n": 1361,
+      "called_healthy": 2.2777369581190303,
+      "answered_confidently": 21.969140337986776
+    },
+    "external_by_source": {
+      "citrusleafvision": {
+        "all": {
+          "n": 1238,
+          "n_unknown_disease": 398,
+          "exact_accuracy": 21.2,
+          "accuracy_crop_given": 63.3,
+          "right_crop": 37.1,
+          "not_sure": 68.3,
+          "accuracy_when_answered": 15.7,
+          "diseased_called_healthy": 0.0,
+          "unknown_disease_called_healthy": 0.0
+        },
+        "by_crop": {
+          "lemon": {
+            "n": 1238,
+            "n_unknown_disease": 398,
+            "exact_accuracy": 21.2,
+            "accuracy_crop_given": 63.3,
+            "right_crop": 37.1,
+            "not_sure": 68.3,
+            "accuracy_when_answered": 15.7,
+            "diseased_called_healthy": 0.0,
+            "unknown_disease_called_healthy": 0.0
+          }
+        }
+      },
+      "dhan_field": {
+        "all": {
+          "n": 337,
+          "n_unknown_disease": 0,
+          "exact_accuracy": 6.8,
+          "accuracy_crop_given": 10.1,
+          "right_crop": 68.2,
+          "not_sure": 67.4,
+          "accuracy_when_answered": 4.5,
+          "diseased_called_healthy": 0.0,
+          "unknown_disease_called_healthy": null
+        },
+        "by_crop": {
+          "rice": {
+            "n": 337,
+            "n_unknown_disease": 0,
+            "exact_accuracy": 6.8,
+            "accuracy_crop_given": 10.1,
+            "right_crop": 68.2,
+            "not_sure": 67.4,
+            "accuracy_when_answered": 4.5,
+            "diseased_called_healthy": 0.0,
+            "unknown_disease_called_healthy": null
+          }
+        }
+      },
+      "dhan_white": {
+        "all": {
+          "n": 767,
+          "n_unknown_disease": 0,
+          "exact_accuracy": 15.6,
+          "accuracy_crop_given": 18.1,
+          "right_crop": 85.8,
+          "not_sure": 63.4,
+          "accuracy_when_answered": 17.1,
+          "diseased_called_healthy": 0.1,
+          "unknown_disease_called_healthy": null
+        },
+        "by_crop": {
+          "rice": {
+            "n": 767,
+            "n_unknown_disease": 0,
+            "exact_accuracy": 15.6,
+            "accuracy_crop_given": 18.1,
+            "right_crop": 85.8,
+            "not_sure": 63.4,
+            "accuracy_when_answered": 17.1,
+            "diseased_called_healthy": 0.1,
+            "unknown_disease_called_healthy": null
+          }
+        }
+      },
+      "mangoleafbd": {
+        "all": {
+          "n": 3479,
+          "n_unknown_disease": 500,
+          "exact_accuracy": 58.0,
+          "accuracy_crop_given": 74.9,
+          "right_crop": 61.7,
+          "not_sure": 46.2,
+          "accuracy_when_answered": 71.8,
+          "diseased_called_healthy": 0.8,
+          "unknown_disease_called_healthy": 1.8
+        },
+        "by_crop": {
+          "mango": {
+            "n": 3479,
+            "n_unknown_disease": 500,
+            "exact_accuracy": 58.0,
+            "accuracy_crop_given": 74.9,
+            "right_crop": 61.7,
+            "not_sure": 46.2,
+            "accuracy_when_answered": 71.8,
+            "diseased_called_healthy": 0.8,
+            "unknown_disease_called_healthy": 1.8
+          }
+        }
+      },
+      "plantdoc": {
+        "all": {
+          "n": 1660,
+          "n_unknown_disease": 463,
+          "exact_accuracy": 19.8,
+          "accuracy_crop_given": 31.4,
+          "right_crop": 38.1,
+          "not_sure": 64.2,
+          "accuracy_when_answered": 29.5,
+          "diseased_called_healthy": 0.3,
+          "unknown_disease_called_healthy": 0.2
+        },
+        "by_crop": {
+          "maize": {
+            "n": 378,
+            "n_unknown_disease": 0,
+            "exact_accuracy": 34.1,
+            "accuracy_crop_given": 46.3,
+            "right_crop": 67.5,
+            "not_sure": 62.2,
+            "accuracy_when_answered": 47.6,
+            "diseased_called_healthy": 0.3,
+            "unknown_disease_called_healthy": null
+          },
+          "potato": {
+            "n": 379,
+            "n_unknown_disease": 171,
+            "exact_accuracy": 43.8,
+            "accuracy_crop_given": 49.5,
+            "right_crop": 76.8,
+            "not_sure": 55.1,
+            "accuracy_when_answered": 60.8,
+            "diseased_called_healthy": 0.5,
+            "unknown_disease_called_healthy": 0.6
+          },
+          "tomato": {
+            "n": 903,
+            "n_unknown_disease": 292,
+            "exact_accuracy": 2.8,
+            "accuracy_crop_given": 16.0,
+            "right_crop": 9.5,
+            "not_sure": 68.9,
+            "accuracy_when_answered": 0.5,
+            "diseased_called_healthy": 0.2,
+            "unknown_disease_called_healthy": 0.0
+          }
+        }
+      }
+    }
   },
+  "onnx_parity_argmax": 1.0,
+  "sha256_onnx": "87bf48f079335bcfaca2ae860eace8a0935d09e00cccd89f549f7475c80e134a",
+  "tflite_file": "model_fp16.tflite",
   "tflite_parity": {
-    "make_tflite.py, ai-edge-litert 2.1.2": {
+    "converter LiteRT": {
       "argmax_agree": 1.0,
       "reject_agree": 1.0,
-      "max_abs_diff": 0.01312720775604248,
+      "max_abs_diff": 0.01288527250289917,
       "input_shape": [
         1,
         300,
         300,
         3
       ],
-      "n": 200
+      "io_dtypes": [
+        "float32",
+        "float32"
+      ]
+    },
+    "LiteRT 1.4.0, as on the phone": {
+      "argmax_agree": 1.0,
+      "reject_agree": 1.0,
+      "max_abs_diff": 0.012885719537734985,
+      "input_shape": [
+        1,
+        300,
+        300,
+        3
+      ],
+      "io_dtypes": [
+        "float32",
+        "float32"
+      ]
     }
   },
-  "onnx_parity_argmax": 1.0,
-  "sha256_onnx": "357d27b5b3f37cebec886a4fa744b4ff0a271e69ff35e25c5c57d96e60f34357",
-  "sha256_tflite": "9eb75c03335dc9ae1bce3ae6a08b89d4f32db84706c5846cbb577f7cdc11fd42",
-  "tflite_file": "model_fp16.tflite",
-  "tflite_converter": "onnx2tf 2.6.9 --tflite_backend tf_converter, tensorflow 2.21.0"
+  "sha256_tflite": "9bc900c68759cf98d2b17837f08e53a36a703b619cfac8f68aeba2d276fb77f6",
+  "tflite_converter": "onnx2tf 2.6.9 --tflite_backend tf_converter"
 }
