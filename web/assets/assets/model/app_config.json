@@ -16,8 +16,8 @@
   },
   "output": "probabilities (temperature applied); index -> labels.txt line",
   "temperature": 0.6400000000000001,
-  "reject_below_confidence": 0.7,
-  "min_crop_mass": 0.3,
+  "reject_below_confidence": 0.99,
+  "min_crop_mass": 0.7,
   "classes": [
     "banana__cordana_leaf_spot",
     "banana__healthy",
@@ -885,5 +885,8 @@
     }
   },
   "sha256_tflite": "9bc900c68759cf98d2b17837f08e53a36a703b619cfac8f68aeba2d276fb77f6",
-  "tflite_converter": "onnx2tf 2.6.9 --tflite_backend tf_converter"
+  "tflite_converter": "onnx2tf 2.6.9 --tflite_backend tf_converter",
+  "reject_below_by_crop": {
+    "rice": 0.999
+  }
 }

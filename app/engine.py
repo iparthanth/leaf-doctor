@@ -37,6 +37,7 @@ class ModelBundle:
     version: str
     nchw: bool
     metrics: dict = field(default_factory=dict)
+    reject_by_crop: dict = field(default_factory=dict)    # crop -> its own minimum confidence (rice: 0.999)
 
     @property
     def crops(self) -> list[str]:
@@ -59,7 +60,8 @@ def load_bundle(model_dir: str | Path) -> ModelBundle:
                        reject_below=float(cfg.get('reject_below_confidence', 0.70)),
                        min_crop_mass=float(cfg.get('min_crop_mass', 0.30)),
                        version=str(cfg.get('model_version') or cfg.get('split_id') or cfg.get('model', 'unknown')),
-                       nchw=nchw, metrics=cfg.get('metrics', {}))
+                       nchw=nchw, metrics=cfg.get('metrics', {}),
+                       reject_by_crop={str(k): float(v) for k, v in cfg.get('reject_below_by_crop', {}).items()})
 
 
 def preprocess(data: bytes, size: int, nchw: bool) -> np.ndarray:
@@ -80,7 +82,7 @@ def run(bundle: ModelBundle, data: bytes) -> np.ndarray:
 
 
 def decide(labels: list[str], probs: np.ndarray, reject_below: float, crop: str | None = None,
-           min_crop_mass: float = 0.30, k: int = 3) -> dict:
+           min_crop_mass: float = 0.30, k: int = 3, reject_by_crop: dict | None = None) -> dict:
     """not_sure | wrong_crop | healthy | disease, plus the top-k it is based on.
 
     If the farmer named the crop, probabilities are renormalised inside that crop:
@@ -103,7 +105,7 @@ def decide(labels: list[str], probs: np.ndarray, reject_below: float, crop: str 
            for i in order]
     if crop_mass is not None and crop_mass < min_crop_mass:
         verdict = 'wrong_crop'
-    elif top[0]['confidence'] < reject_below:
+    elif top[0]['confidence'] < (reject_by_crop or {}).get(crop_of(top[0]['label']), reject_below):
         verdict = 'not_sure'
     elif top[0]['healthy']:
         verdict = 'healthy'

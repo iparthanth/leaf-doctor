@@ -152,7 +152,7 @@ async def diagnose(image: list[UploadFile] = File(...), crop: str | None = Form(
         probs = sum(engine.run(b, d) for d in blobs) / len(blobs)
     except (UnidentifiedImageError, OSError):
         raise HTTPException(415, 'not an image the server can read')
-    result = engine.decide(b.labels, probs, b.reject_below, crop, b.min_crop_mass)
+    result = engine.decide(b.labels, probs, b.reject_below, crop, b.min_crop_mass, reject_by_crop=b.reject_by_crop)
     thumb = _save_thumb(blobs[0])
     case = _store.new_case(crop, result['verdict'], result['top'], b.version, thumb, district,
                            round((time.perf_counter() - t0) * 1000, 1))
