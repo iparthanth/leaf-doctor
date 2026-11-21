@@ -24,6 +24,7 @@ from __future__ import annotations
 import hmac
 import io
 import os
+import re
 import threading
 import time
 import urllib.request
@@ -234,6 +235,89 @@ def reply(case_id: str, q: Question):
     if not _store.case(case_id):
         raise HTTPException(404, 'no such case')
     return _store.add_message(case_id, 'expert', q.body.strip(), new_status='answered')
+
+
+# ---- farmers' photos labelled by the expert: the data the next model learns from (notebook cell 28.0)
+LABEL_RE = re.compile(r'^([a-z][a-z_]*__[a-z0-9_]+|unusable)$')
+# Render's free disk is wiped on every deploy: a labelled photo is also copied to this Hugging Face dataset
+# (set FARMER_HF_REPO and HF_TOKEN on the host). Without them the desk's export zip is the copy to keep.
+FARMER_HF_REPO = os.environ.get('FARMER_HF_REPO', '')
+
+
+class Label(BaseModel):
+    label: str = Field(min_length=3, max_length=80)
+
+
+def _push_label(case_id: str, label: str, image_path: str | None, old: str | None):
+    token = os.environ.get('HF_TOKEN')
+    if not (FARMER_HF_REPO and token):
+        return
+    try:
+        from huggingface_hub import HfApi
+        api = HfApi(token=token)
+        if old and old not in ('unusable', label):
+            try:
+                api.delete_file(f'{old}/{case_id}.jpg', FARMER_HF_REPO, repo_type='dataset',
+                                commit_message=f'{case_id}: relabelled')
+            except Exception:
+                pass
+        if label != 'unusable' and image_path and os.path.exists(image_path):
+            api.upload_file(path_or_fileobj=image_path, path_in_repo=f'{label}/{case_id}.jpg',
+                            repo_id=FARMER_HF_REPO, repo_type='dataset', commit_message=f'{case_id}: {label}')
+    except Exception as e:      # ponytail: best effort, no retry queue - the export zip still holds the photo
+        print(f'farmer photo push failed: {type(e).__name__}')
+
+
+@app.get('/api/v1/expert/queue', dependencies=[Depends(expert)])
+def label_queue(limit: int = 40):
+    cases = _store.label_queue(min(max(limit, 1), 200))
+    for c in cases:
+        c.pop('image_path', None)
+        c['photo'] = f"/api/v1/expert/cases/{c['id']}/photo"
+    return {'cases': cases, 'labelled': _store.label_counts()}
+
+
+@app.get('/api/v1/expert/cases/{case_id}/photo', dependencies=[Depends(expert)])
+def case_photo(case_id: str):
+    c = _store.case(case_id)
+    if not c or not c.get('image_path') or not os.path.exists(c['image_path']):
+        raise HTTPException(404, 'no photo')
+    return FileResponse(c['image_path'], media_type='image/jpeg')
+
+
+@app.post('/api/v1/expert/cases/{case_id}/label', dependencies=[Depends(expert)])
+def label_case(case_id: str, body: Label):
+    label = body.label.strip().lower()
+    if not LABEL_RE.match(label):
+        raise HTTPException(422, "label must be 'crop__disease' in lower case (e.g. rice__blast) or 'unusable'")
+    c = _store.case(case_id)
+    if not c:
+        raise HTTPException(404, 'no such case')
+    old = _store.set_label(case_id, label)
+    threading.Thread(target=_push_label, args=(case_id, label, c.get('image_path'), old), daemon=True).start()
+    return {'id': case_id, 'label': label, 'pushed': bool(FARMER_HF_REPO and os.environ.get('HF_TOKEN'))}
+
+
+@app.get('/api/v1/expert/export.zip', dependencies=[Depends(expert)])
+def export_labelled():
+    """Every labelled photo as leaf_doctor_farmer_photos/<crop__disease>/<case>.jpg plus labels.csv: attach the
+    zip to Kaggle as a dataset and notebook cell 28.0 trains on it (and 28.5 tests on its held-out part)."""
+    import csv
+    import zipfile
+    from fastapi.responses import Response
+    buf, table = io.BytesIO(), io.StringIO()
+    w = csv.writer(table)
+    w.writerow(['case_id', 'label', 'crop_picked', 'app_answer', 'app_confidence', 'model_version', 'created'])
+    with zipfile.ZipFile(buf, 'w', zipfile.ZIP_STORED) as z:        # JPEGs do not compress further
+        for c in _store.labelled():     # ponytail: built in memory; stream it once thousands are labelled
+            top = c['top'][0] if c['top'] else {}
+            w.writerow([c['id'], c['expert_label'], c.get('crop') or '', top.get('label', ''),
+                        top.get('confidence', ''), c.get('model_version') or '', round(c['created'])])
+            if c['expert_label'] != 'unusable' and c.get('image_path') and os.path.exists(c['image_path']):
+                z.write(c['image_path'], f"leaf_doctor_farmer_photos/{c['expert_label']}/{c['id']}.jpg")
+        z.writestr('leaf_doctor_farmer_photos/labels.csv', table.getvalue())
+    return Response(buf.getvalue(), media_type='application/zip',
+                    headers={'Content-Disposition': 'attachment; filename="leaf_doctor_farmer_photos.zip"'})
 
 
 # The web build of the app (flutter build web) and the Android APK, served from this same address,

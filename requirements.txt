@@ -4,3 +4,4 @@ python-multipart>=0.0.9
 onnxruntime>=1.19
 numpy>=1.26
 pillow>=10.4
+huggingface_hub>=0.24   # only used when FARMER_HF_REPO and HF_TOKEN are set

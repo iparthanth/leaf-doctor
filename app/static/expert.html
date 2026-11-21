@@ -7,43 +7,55 @@
 <style>
   :root{--paddy:#0B6E4F;--cream:#F7F3E8;--line:#E4DCC8;--ink:#1F1A14;--soil:#5A4636;--red:#B3261E}
   *{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 "Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif}
-  header{background:var(--paddy);color:#fff;padding:14px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  header h1{font-size:19px;margin:0;flex:1}
-  input,textarea,button{font:inherit} input{padding:8px 10px;border-radius:8px;border:1px solid var(--line);min-width:220px}
+  header{background:var(--paddy);color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  header h1{font-size:19px;margin:0;flex:1 1 260px}
+  input,textarea,button{font:inherit} input{padding:8px 10px;border-radius:8px;border:1px solid var(--line);min-width:0}
+  #tok{min-width:200px}
   button{background:var(--paddy);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
   button.ghost{background:transparent;border:1px solid #fff}
+  button.plain{background:#fff;color:var(--soil);border:1px solid var(--line)}
   main{max-width:980px;margin:0 auto;padding:16px}
   .case{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
-  .meta{color:var(--soil);font-size:14px}
+  .lab{grid-template-columns:minmax(0,320px) minmax(0,1fr)}
+  @media (max-width:640px){.lab{grid-template-columns:minmax(0,1fr)}}
+  .lab img{width:100%;border-radius:8px;background:var(--cream);min-height:120px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center} .row input{flex:1 1 240px}
+  .meta{color:var(--soil);font-size:14px} .note{color:var(--soil);font-size:14px;margin:0 0 12px}
   .msg{border-radius:10px;padding:8px 12px;background:#E3F0E8;max-width:720px}
   .msg.expert{background:#fff;border:1px solid var(--line)}
   textarea{width:100%;min-height:70px;padding:8px;border-radius:8px;border:1px solid var(--line)}
   .empty{color:var(--soil);text-align:center;padding:40px 0}
-  .err{color:var(--red)}
+  .err{color:var(--red)} .ok{color:var(--paddy);font-weight:600}
 </style>
 </head>
 <body>
 <header>
   <h1>পাতা ডাক্তার — বিশেষজ্ঞ ডেস্ক · Expert desk</h1>
   <input id="tok" type="password" placeholder="Expert token" autocomplete="current-password">
-  <button class="ghost" id="load">Load</button>
+  <button class="ghost" id="qs">প্রশ্ন · Questions</button>
+  <button class="ghost" id="lb">ছবি চিহ্নিত · Label photos</button>
+  <button class="ghost" id="dl">Download labelled photos</button>
 </header>
-<main id="list"><p class="empty">Enter the expert token to see open questions.</p></main>
+<main id="list"><p class="empty">Enter the expert token, then open the farmers' questions or the photos to label.</p></main>
+<datalist id="classes"></datalist>
 <script>
 const $ = s => document.querySelector(s);
 const tok = () => $('#tok').value.trim();
+const auth = () => ({Authorization: 'Bearer ' + tok()});
 function el(tag, cls, text){ const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
-async function load(){
+function fail(r){ return el('p', 'err', r.status === 401 ? 'Wrong token.' : 'Error ' + r.status); }
+const topText = c => c.top.map(t => `${t.label} ${(t.confidence*100).toFixed(0)}%`).join(' · ');
+
+async function questions(){
   const list = $('#list'); list.textContent = '';
   try {
-    const r = await fetch('/api/v1/expert/cases', {headers: {Authorization: 'Bearer ' + tok()}});
-    if (!r.ok) { list.append(el('p', 'err', r.status === 401 ? 'Wrong token.' : 'Error ' + r.status)); return; }
+    const r = await fetch('/api/v1/expert/cases', {headers: auth()});
+    if (!r.ok) { list.append(fail(r)); return; }
     const cases = await r.json();
     if (!cases.length) { list.append(el('p', 'empty', 'No open questions. কোনো প্রশ্ন নেই।')); return; }
     for (const c of cases) {
       const card = el('section', 'case');
-      const top = c.top.map(t => `${t.label} ${(t.confidence*100).toFixed(0)}%`).join(' · ');
-      card.append(el('div', 'meta', `${new Date(c.created*1000).toLocaleString()} · crop: ${c.crop || '—'} · district: ${c.district || '—'} · app said: ${c.verdict} (${top})`));
+      card.append(el('div', 'meta', `${new Date(c.created*1000).toLocaleString()} · crop: ${c.crop || '—'} · district: ${c.district || '—'} · app said: ${c.verdict} (${topText(c)})`));
       for (const m of c.messages) card.append(el('div', 'msg ' + m.sender, (m.sender === 'expert' ? 'Expert: ' : 'Farmer: ') + m.body));
       const ta = el('textarea'); ta.placeholder = 'উত্তর লিখুন · Write the reply (Bangla preferred)';
       const b = el('button', null, 'Send reply');
@@ -51,15 +63,73 @@ async function load(){
         if (!ta.value.trim()) return;
         b.disabled = true;
         const r2 = await fetch(`/api/v1/expert/cases/${encodeURIComponent(c.id)}/reply`, {method: 'POST',
-          headers: {Authorization: 'Bearer ' + tok(), 'Content-Type': 'application/json'}, body: JSON.stringify({body: ta.value.trim()})});
-        if (r2.ok) load(); else { b.disabled = false; alert('Error ' + r2.status); }
+          headers: {...auth(), 'Content-Type': 'application/json'}, body: JSON.stringify({body: ta.value.trim()})});
+        if (r2.ok) questions(); else { b.disabled = false; alert('Error ' + r2.status); }
       };
       card.append(ta, b); list.append(card);
     }
   } catch (e) { list.append(el('p', 'err', String(e))); }
 }
-$('#load').onclick = load;
-$('#tok').addEventListener('keydown', e => { if (e.key === 'Enter') load(); });
+
+async function loadClasses(){
+  const dl = $('#classes');
+  if (dl.childElementCount) return;
+  try {
+    const m = await (await fetch('/api/v1/meta?lang=bn')).json();
+    for (const c of m.classes) { const o = document.createElement('option'); o.value = c.id; o.label = `${c.name} — ${c.id}`; dl.append(o); }
+  } catch (e) { /* typing the label still works */ }
+}
+
+async function label(){
+  const list = $('#list'); list.textContent = '';
+  await loadClasses();
+  try {
+    const r = await fetch('/api/v1/expert/queue', {headers: auth()});
+    if (!r.ok) { list.append(fail(r)); return; }
+    const q = await r.json();
+    const done = Object.entries(q.labelled), n = done.reduce((s, [, v]) => s + v, 0);
+    list.append(el('p', 'note', `Labelled so far: ${n} photos in ${done.filter(([k]) => k !== 'unusable').length} diseases. ` +
+      'The next model learns from these: a label must be the true disease of the leaf in the photo. ' +
+      'Photos the farmer called wrong, and photos the app was not sure about, come first.'));
+    if (!q.cases.length) { list.append(el('p', 'empty', 'Nothing to label. সব ছবি চিহ্নিত।')); return; }
+    for (const c of q.cases) {
+      const card = el('section', 'case lab');
+      const img = el('img'); img.alt = 'leaf photo ' + c.id;
+      fetch(c.photo, {headers: auth()}).then(p => p.ok ? p.blob() : null).then(b => { if (b) img.src = URL.createObjectURL(b); });
+      const right = el('div');
+      right.append(el('div', 'meta', `${new Date(c.created*1000).toLocaleString()} · crop picked: ${c.crop || '—'} · district: ${c.district || '—'}`));
+      right.append(el('div', 'meta', `app said: ${c.verdict} (${topText(c)})`));
+      if (c.feedback_correct === 0) right.append(el('div', 'err', 'Farmer: the answer was wrong' + (c.feedback_label ? ` — says it is ${c.feedback_label}` : '')));
+      if (c.feedback_correct === 1) right.append(el('div', 'meta', 'Farmer: the answer was right'));
+      const row = el('div', 'row');
+      const inp = el('input'); inp.setAttribute('list', 'classes'); inp.placeholder = 'crop__disease, e.g. rice__blast';
+      if (c.verdict === 'disease' || c.verdict === 'healthy') inp.value = c.top[0].label;
+      const save = el('button', null, 'Save label'), junk = el('button', 'plain', 'Unusable photo');
+      const send = async v => {
+        save.disabled = junk.disabled = true;
+        const r2 = await fetch(`/api/v1/expert/cases/${encodeURIComponent(c.id)}/label`, {method: 'POST',
+          headers: {...auth(), 'Content-Type': 'application/json'}, body: JSON.stringify({label: v})});
+        if (r2.ok) { const j = await r2.json(); row.replaceWith(el('div', 'ok', '✓ ' + j.label)); }
+        else { save.disabled = junk.disabled = false; alert(r2.status === 422 ? 'Use crop__disease in lower case, e.g. rice__blast' : 'Error ' + r2.status); }
+      };
+      save.onclick = () => inp.value.trim() && send(inp.value.trim());
+      junk.onclick = () => send('unusable');
+      row.append(inp, save, junk); right.append(row); card.append(img, right); list.append(card);
+    }
+  } catch (e) { list.append(el('p', 'err', String(e))); }
+}
+
+async function download(){
+  const r = await fetch('/api/v1/expert/export.zip', {headers: auth()});
+  if (!r.ok) { alert(r.status === 401 ? 'Wrong token.' : 'Error ' + r.status); return; }
+  const a = el('a'); a.href = URL.createObjectURL(await r.blob()); a.download = 'leaf_doctor_farmer_photos.zip';
+  document.body.append(a); a.click(); a.remove();
+}
+
+$('#qs').onclick = questions;
+$('#lb').onclick = label;
+$('#dl').onclick = download;
+$('#tok').addEventListener('keydown', e => { if (e.key === 'Enter') label(); });
 </script>
 </body>
 </html>
